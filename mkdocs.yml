@@ -1,0 +1,100 @@
+site_name:  bpmnServer docs
+docs_dir: docs
+site_dir: ../../site
+repo_url: https://github.com/bpmnServer/bpmn-server
+theme:
+  name: material
+  favicon: favicon.ico
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+    - navigation.footer
+  language: en
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline 
+        name: Switch to dark mode
+      primary: teal
+      accent: purple 
+    - scheme: slate 
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode    
+      primary: teal
+      accent: lime
+
+plugins:
+  - search
+
+markdown_extensions:
+  - toc:
+      permalink: "#" 
+  - attr_list
+  - md_in_html
+  - tables
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+
+use_directory_urls: true
+
+nav:  
+- bpmn-server:
+  - Overview:  index.md
+  - 'Invoking Workflows': invokation.md 
+  - 'Execution': execution.md
+  - 'Scripting': scripting.md
+  - 'Security': security.md
+  - 'Data': data.md 
+  - 'Setup': setup.md 
+  - 'Application Integration': customization.md 
+  - 'Advanced Topics': advanced.md
+- bpmn-web:
+  - 'install': bpmn-web.md
+  - 'Executing Example': examples/BuyCar-Web.md
+
+- bpmn-client:
+  - 'install': bpmn-client.md
+  - 'Executing Example': examples/BuyCar-Remote.md
+  - 'Client API': client-api.md
+
+- Examples/Features:
+  - 'Examples': examples.md 
+  - 'Boundary Events': examples/boundary-events.md
+  - 'Event Based Gateway': examples/gateway.md
+  - 'Error Events': examples/error_events.md
+  - 'loop': examples/loop.md
+  - 'UserTask Assignment': security.md
+  - 'Timers': timers.md
+- API:
+  - 'API Summary': api-summary.md
+  - 'API Example': examples//BuyCar-Server.md
+  - 'API': api/readme.md
+- Tutorial:
+  - 'Overview': tutorial.md
+  - 'Getting Started': tutorial-setup.md
+  - 'Model': tutorial-model.md
+  - 'Design': tutorial-design.md
+  - 'Adding Security': tutorial-security.md
+
