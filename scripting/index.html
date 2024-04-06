@@ -1317,14 +1317,7 @@ scripts have full access to the running working full, as well as your applicatio
 <h2 id="model-expressionsscripts">Model Expressions/Scripts<a class="headerlink" href="#model-expressionsscripts" title="Permanent link">#</a></h2>
 <h3 id="model-expressions">Model Expressions<a class="headerlink" href="#model-expressions" title="Permanent link">#</a></h3>
 <h4 id="conditional-flow-examples">conditional flow examples:<a class="headerlink" href="#conditional-flow-examples" title="Permanent link">#</a></h4>
-<table>
-<tr><td>
-
-![flow-conditin](images/flow-condition.png)
-
-</td><td>
-
-
+<p><img align="right" alt="flow-conditin" src="../images/flow-condition.png" /></p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    data.approval==&#39;Approved&#39;
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  or 
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    (data.approval==&#39;Approved&#39;)
@@ -1333,8 +1326,7 @@ scripts have full access to the running working full, as well as your applicatio
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    (this.data.v1 + this.data.v2)&gt;0
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    (this.data.v1 + this.data.v2)&lt;4
 </span></code></pre></div>
-
-</td></tr></table>
+<div style="clear:both;" />
 
 <h4 id="timers-examples">timers examples:<a class="headerlink" href="#timers-examples" title="Permanent link">#</a></h4>
 <p>For duration timers
@@ -1369,44 +1361,52 @@ scripts have full access to the running working full, as well as your applicatio
 </span></code></pre></div>
 <h2 id="execution-listeners">Execution Listeners<a class="headerlink" href="#execution-listeners" title="Permanent link">#</a></h2>
 <p>These are for all node types and processes</p>
+<p><img align="left" alt="flow-conditin" src="../images/execution%20listener.png" /></p>
 <table>
-<tr><td>
-
-
-| event        |       Description        |
-|-------------  |-------------   |
-| start   |   is fired at the start of item execution|
-| end   |     is fired at the end of item execution|
-
-
-Also at the process level, start and end are triggered
-
-</td><td>
-
-![flow-conditin](images/execution%20listener.png)
-
-
-</td></tr></table>
+<thead>
+<tr>
+<th>event</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>start</td>
+<td>is fired at the start of item execution</td>
+</tr>
+<tr>
+<td>end</td>
+<td>is fired at the end of item execution</td>
+</tr>
+</tbody>
+</table>
+<div style="clear:both;" />
 
 <h3 id="task-listeners">Task Listeners<a class="headerlink" href="#task-listeners" title="Permanent link">#</a></h3>
-<details>
-<summary>
-These are for User Tasks only
-</summary>
-
-| event        |       Description        |
-|-------------  |-------------   |
-| assign   |   invoked after `assign` command is issued |
-| validate  |invoked after `assign` or `invoke`  command is issued|
-
-`validate` scripts have a special handling, that they can stop execution by raising errors, to return errors to the execution:
+<p>These are for User Tasks only</p>
+<table>
+<thead>
+<tr>
+<th>event</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>assign</td>
+<td>invoked after <code>assign</code> command is issued</td>
+</tr>
+<tr>
+<td>validate</td>
+<td>invoked after <code>assign</code> or <code>invoke</code>  command is issued</td>
+</tr>
+</tbody>
+</table>
+<p><code>validate</code> scripts have a special handling, that they can stop execution by raising errors, to return errors to the execution:
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>    // do some checking here
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    return {error:&#39;Not a valid Input&#39;};
 </span></code></pre></div>
-As a result execution will raise an exception and the command will fail.
-
-</details>
-
+As a result execution will raise an exception and the command will fail.</p>
 <h2 id="application-listener">Application Listener<a class="headerlink" href="#application-listener" title="Permanent link">#</a></h2>
 <p>You can place a listener in your application delegate or your execution scripts class to listen to all events
 Example:
