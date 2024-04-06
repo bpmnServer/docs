@@ -1,11 +1,12 @@
 site_name:  bpmnServer docs
 docs_dir: docs
-site_dir: ../../site
+site_dir: site
 repo_url: https://github.com/bpmnServer/bpmn-server
 theme:
   name: material
   favicon: favicon.ico
   features:
+    - content.tooltips
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.sections
@@ -39,6 +40,7 @@ markdown_extensions:
   - toc:
       permalink: "#" 
   - attr_list
+  - abbr
   - md_in_html
   - tables
   - pymdownx.inlinehilite
@@ -91,10 +93,14 @@ nav:
   - 'API Summary': api-summary.md
   - 'API Example': examples//BuyCar-Server.md
   - 'API': api/readme.md
-- Tutorial:
-  - 'Overview': tutorial.md
-  - 'Getting Started': tutorial-setup.md
-  - 'Model': tutorial-model.md
-  - 'Design': tutorial-design.md
-  - 'Adding Security': tutorial-security.md
 
+
+# - Tutorial:
+#   - 'Intro to BPMN': bpmn/intro.md
+#   - 'Overview': tutorial.md
+#   - 'Getting Started': tutorial-setup.md
+#   - 'Model': tutorial-model.md
+#   - 'Design': tutorial-design.md
+#   - 'Adding Security': tutorial-security.md
+
+not_in_nav: api/
