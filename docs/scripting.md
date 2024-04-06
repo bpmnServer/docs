@@ -31,12 +31,8 @@ Scripting is used to add logic to your workflow and is achieved by:
 
 #### conditional flow examples:
 
-<table>
-<tr><td>
 
-![flow-conditin](images/flow-condition.png)
-
-</td><td>
+![flow-conditin](images/flow-condition.png){align=right}
 
 
 ```
@@ -49,8 +45,7 @@ Scripting is used to add logic to your workflow and is achieved by:
     (this.data.v1 + this.data.v2)<4
     
 ```
-
-</td></tr></table>
+<div style="clear:both;" />
 
 #### timers examples:
 For duration timers
@@ -99,31 +94,20 @@ No syntax required for these scripts
 ## Execution Listeners
 These are for all node types and processes
 
-<table>
-<tr><td>
 
+![flow-conditin](images/execution%20listener.png){align=left}
 
-| event        |       Description        |
-|-------------  |-------------   |
+| event         |       Description        |
+|-------------  |-----------------------|
 | start   |   is fired at the start of item execution|
 | end   |	  is fired at the end of item execution|
 
+<div style="clear:both;" />
 
-Also at the process level, start and end are triggered
-
-</td><td>
-
-![flow-conditin](images/execution%20listener.png)
-
-
-</td></tr></table>
 
 
 ### Task Listeners
-<details>
-<summary>
 These are for User Tasks only
-</summary>
 
 | event        |       Description        |
 |-------------  |-------------   |
@@ -138,7 +122,6 @@ These are for User Tasks only
 ```
 As a result execution will raise an exception and the command will fail.
 
-</details>
 
 ## Application Listener
 
