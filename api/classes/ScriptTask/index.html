@@ -1,0 +1,2006 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../favicon.ico">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>ScriptTask - bpmnServer docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#class-scripttask" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="bpmnServer docs" class="md-header__button md-logo" aria-label="bpmnServer docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            bpmnServer docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ScriptTask
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/bpmnServer/bpmn-server" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../.." class="md-tabs__link">
+          
+  
+  bpmn-server
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../bpmn-web/" class="md-tabs__link">
+          
+  
+  bpmn-web
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../bpmn-client/" class="md-tabs__link">
+          
+  
+  bpmn-client
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../examples/" class="md-tabs__link">
+          
+  
+  Examples/Features
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../api-summary/" class="md-tabs__link">
+          
+  
+  API
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="bpmnServer docs" class="md-nav__button md-logo" aria-label="bpmnServer docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    bpmnServer docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/bpmnServer/bpmn-server" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    bpmn-server
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            bpmn-server
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../invokation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Invoking Workflows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../execution/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Execution
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../scripting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scripting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../customization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Application Integration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Advanced Topics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    bpmn-web
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            bpmn-web
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bpmn-web/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    install
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/BuyCar-Web/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Executing Example
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    bpmn-client
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            bpmn-client
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bpmn-client/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    install
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/BuyCar-Remote/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Executing Example
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../client-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Client API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Examples/Features
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Examples/Features
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Examples
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/boundary-events/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Boundary Events
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/gateway/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Event Based Gateway
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/error_events/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Error Events
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/loop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    loop
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UserTask Assignment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../timers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api-summary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Summary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/BuyCar-Server/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Example
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../readme/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<p><a href="../../readme/">bpmn-server</a> / ScriptTask</p>
+<h1 id="class-scripttask">Class: ScriptTask<a class="headerlink" href="#class-scripttask" title="Permanent link">#</a></h1>
+<h2 id="hierarchy">Hierarchy<a class="headerlink" href="#hierarchy" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../Node/"><code>Node</code></a></li>
+</ul>
+<p>↳ <strong><code>ScriptTask</code></strong></p>
+<h2 id="table-of-contents">Table of contents<a class="headerlink" href="#table-of-contents" title="Permanent link">#</a></h2>
+<h3 id="constructors">Constructors<a class="headerlink" href="#constructors" title="Permanent link">#</a></h3>
+<ul>
+<li><a href="./#constructor">constructor</a></li>
+</ul>
+<h3 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">#</a></h3>
+<ul>
+<li><a href="./#id">id</a></li>
+<li><a href="./#type">type</a></li>
+<li><a href="./#subtype">subType</a></li>
+<li><a href="./#behaviours">behaviours</a></li>
+<li><a href="./#isflow">isFlow</a></li>
+<li><a href="./#lane">lane</a></li>
+<li><a href="./#name">name</a></li>
+<li><a href="./#process">process</a></li>
+<li><a href="./#def">def</a></li>
+<li><a href="./#outbounds">outbounds</a></li>
+<li><a href="./#inbounds">inbounds</a></li>
+<li><a href="./#attachments">attachments</a></li>
+<li><a href="./#attachedto">attachedTo</a></li>
+<li><a href="./#messageid">messageId</a></li>
+<li><a href="./#signalid">signalId</a></li>
+<li><a href="./#initiator">initiator</a></li>
+<li><a href="./#assignee">assignee</a></li>
+<li><a href="./#candidategroups">candidateGroups</a></li>
+<li><a href="./#candidateusers">candidateUsers</a></li>
+<li><a href="./#scripts">scripts</a></li>
+</ul>
+<h3 id="accessors">Accessors<a class="headerlink" href="#accessors" title="Permanent link">#</a></h3>
+<ul>
+<li><a href="./#processid">processId</a></li>
+<li><a href="./#requireswait">requiresWait</a></li>
+<li><a href="./#canbeinvoked">canBeInvoked</a></li>
+<li><a href="./#iscatching">isCatching</a></li>
+</ul>
+<h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">#</a></h3>
+<ul>
+<li><a href="./#restored">restored</a></li>
+<li><a href="./#hasbehaviour">hasBehaviour</a></li>
+<li><a href="./#getbehaviour">getBehaviour</a></li>
+<li><a href="./#addbehaviour">addBehaviour</a></li>
+<li><a href="./#validate">validate</a></li>
+<li><a href="./#doevent">doEvent</a></li>
+<li><a href="./#setinput">setInput</a></li>
+<li><a href="./#getinput">getInput</a></li>
+<li><a href="./#getoutput">getOutput</a></li>
+<li><a href="./#enter">enter</a></li>
+<li><a href="./#execute">execute</a></li>
+<li><a href="./#continue">continue</a></li>
+<li><a href="./#start">start</a></li>
+<li><a href="./#cancelebg">cancelEBG</a></li>
+<li><a href="./#cancelboundaryevents">cancelBoundaryEvents</a></li>
+<li><a href="./#end">end</a></li>
+<li><a href="./#resume">resume</a></li>
+<li><a href="./#init">init</a></li>
+<li><a href="./#getoutbounds">getOutbounds</a></li>
+<li><a href="./#startboundaryevents">startBoundaryEvents</a></li>
+<li><a href="./#describe">describe</a></li>
+<li><a href="./#run">run</a></li>
+</ul>
+<h2 id="constructors_1">Constructors<a class="headerlink" href="#constructors_1" title="Permanent link">#</a></h2>
+<h3 id="constructor">constructor<a class="headerlink" href="#constructor" title="Permanent link">#</a></h3>
+<p>• <strong>new ScriptTask</strong>(<code>id</code>, <code>process</code>, <code>type</code>, <code>def</code>): <a href="./"><code>ScriptTask</code></a></p>
+<h4 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>id</code></td>
+<td style="text-align: left;"><code>any</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>process</code></td>
+<td style="text-align: left;"><code>any</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>type</code></td>
+<td style="text-align: left;"><code>any</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>def</code></td>
+<td style="text-align: left;"><code>any</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns">Returns<a class="headerlink" href="#returns" title="Permanent link">#</a></h4>
+<p><a href="./"><code>ScriptTask</code></a></p>
+<h4 id="inherited-from">Inherited from<a class="headerlink" href="#inherited-from" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#constructor">constructor</a></p>
+<h4 id="defined-in">Defined in<a class="headerlink" href="#defined-in" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Node.ts#L32">elements/Node.ts:32</a></p>
+<h2 id="properties_1">Properties<a class="headerlink" href="#properties_1" title="Permanent link">#</a></h2>
+<h3 id="id">id<a class="headerlink" href="#id" title="Permanent link">#</a></h3>
+<p>• <strong>id</strong>: <code>any</code></p>
+<h4 id="inherited-from_1">Inherited from<a class="headerlink" href="#inherited-from_1" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#id">id</a></p>
+<h4 id="defined-in_1">Defined in<a class="headerlink" href="#defined-in_1" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Element.ts#L13">elements/Element.ts:13</a></p>
+<hr />
+<h3 id="type">type<a class="headerlink" href="#type" title="Permanent link">#</a></h3>
+<p>• <strong>type</strong>: <code>any</code></p>
+<h4 id="inherited-from_2">Inherited from<a class="headerlink" href="#inherited-from_2" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#type">type</a></p>
+<h4 id="defined-in_2">Defined in<a class="headerlink" href="#defined-in_2" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Element.ts#L14">elements/Element.ts:14</a></p>
+<hr />
+<h3 id="subtype">subType<a class="headerlink" href="#subtype" title="Permanent link">#</a></h3>
+<p>• <strong>subType</strong>: <code>any</code></p>
+<h4 id="inherited-from_3">Inherited from<a class="headerlink" href="#inherited-from_3" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#subtype">subType</a></p>
+<h4 id="defined-in_3">Defined in<a class="headerlink" href="#defined-in_3" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Element.ts#L15">elements/Element.ts:15</a></p>
+<hr />
+<h3 id="behaviours">behaviours<a class="headerlink" href="#behaviours" title="Permanent link">#</a></h3>
+<p>• <strong>behaviours</strong>: <code>Map</code>\&lt;<code>any</code>, <code>any</code>&gt;</p>
+<h4 id="inherited-from_4">Inherited from<a class="headerlink" href="#inherited-from_4" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#behaviours">behaviours</a></p>
+<h4 id="defined-in_4">Defined in<a class="headerlink" href="#defined-in_4" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Element.ts#L17">elements/Element.ts:17</a></p>
+<hr />
+<h3 id="isflow">isFlow<a class="headerlink" href="#isflow" title="Permanent link">#</a></h3>
+<p>• <strong>isFlow</strong>: <code>boolean</code> = <code>false</code></p>
+<h4 id="inherited-from_5">Inherited from<a class="headerlink" href="#inherited-from_5" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#isflow">isFlow</a></p>
+<h4 id="defined-in_5">Defined in<a class="headerlink" href="#defined-in_5" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Element.ts#L18">elements/Element.ts:18</a></p>
+<hr />
+<h3 id="lane">lane<a class="headerlink" href="#lane" title="Permanent link">#</a></h3>
+<p>• <strong>lane</strong>: <code>any</code></p>
+<h4 id="inherited-from_6">Inherited from<a class="headerlink" href="#inherited-from_6" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#lane">lane</a></p>
+<h4 id="defined-in_6">Defined in<a class="headerlink" href="#defined-in_6" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Element.ts#L19">elements/Element.ts:19</a></p>
+<hr />
+<h3 id="name">name<a class="headerlink" href="#name" title="Permanent link">#</a></h3>
+<p>• <strong>name</strong>: <code>any</code></p>
+<h4 id="inherited-from_7">Inherited from<a class="headerlink" href="#inherited-from_7" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#name">name</a></p>
+<h4 id="defined-in_7">Defined in<a class="headerlink" href="#defined-in_7" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Node.ts#L13">elements/Node.ts:13</a></p>
+<hr />
+<h3 id="process">process<a class="headerlink" href="#process" title="Permanent link">#</a></h3>
+<p>• <strong>process</strong>: <code>any</code></p>
+<h4 id="inherited-from_8">Inherited from<a class="headerlink" href="#inherited-from_8" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#process">process</a></p>
+<h4 id="defined-in_8">Defined in<a class="headerlink" href="#defined-in_8" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Node.ts#L14">elements/Node.ts:14</a></p>
+<hr />
+<h3 id="def">def<a class="headerlink" href="#def" title="Permanent link">#</a></h3>
+<p>• <strong>def</strong>: <code>any</code></p>
+<h4 id="inherited-from_9">Inherited from<a class="headerlink" href="#inherited-from_9" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#def">def</a></p>
+<h4 id="defined-in_9">Defined in<a class="headerlink" href="#defined-in_9" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Node.ts#L15">elements/Node.ts:15</a></p>
+<hr />
+<h3 id="outbounds">outbounds<a class="headerlink" href="#outbounds" title="Permanent link">#</a></h3>
+<p>• <strong>outbounds</strong>: <a href="../Flow/"><code>Flow</code></a>[]</p>
+<h4 id="inherited-from_10">Inherited from<a class="headerlink" href="#inherited-from_10" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#outbounds">outbounds</a></p>
+<h4 id="defined-in_10">Defined in<a class="headerlink" href="#defined-in_10" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Node.ts#L16">elements/Node.ts:16</a></p>
+<hr />
+<h3 id="inbounds">inbounds<a class="headerlink" href="#inbounds" title="Permanent link">#</a></h3>
+<p>• <strong>inbounds</strong>: <a href="../Flow/"><code>Flow</code></a>[]</p>
+<h4 id="inherited-from_11">Inherited from<a class="headerlink" href="#inherited-from_11" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#inbounds">inbounds</a></p>
+<h4 id="defined-in_11">Defined in<a class="headerlink" href="#defined-in_11" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Node.ts#L17">elements/Node.ts:17</a></p>
+<hr />
+<h3 id="attachments">attachments<a class="headerlink" href="#attachments" title="Permanent link">#</a></h3>
+<p>• <strong>attachments</strong>: <a href="../Node/"><code>Node</code></a>[]</p>
+<h4 id="inherited-from_12">Inherited from<a class="headerlink" href="#inherited-from_12" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#attachments">attachments</a></p>
+<h4 id="defined-in_12">Defined in<a class="headerlink" href="#defined-in_12" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Node.ts#L18">elements/Node.ts:18</a></p>
+<hr />
+<h3 id="attachedto">attachedTo<a class="headerlink" href="#attachedto" title="Permanent link">#</a></h3>
+<p>• <strong>attachedTo</strong>: <a href="../Node/"><code>Node</code></a></p>
+<h4 id="inherited-from_13">Inherited from<a class="headerlink" href="#inherited-from_13" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#attachedto">attachedTo</a></p>
+<h4 id="defined-in_13">Defined in<a class="headerlink" href="#defined-in_13" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Node.ts#L19">elements/Node.ts:19</a></p>
+<hr />
+<h3 id="messageid">messageId<a class="headerlink" href="#messageid" title="Permanent link">#</a></h3>
+<p>• <strong>messageId</strong>: <code>any</code></p>
+<h4 id="inherited-from_14">Inherited from<a class="headerlink" href="#inherited-from_14" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#messageid">messageId</a></p>
+<h4 id="defined-in_14">Defined in<a class="headerlink" href="#defined-in_14" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Node.ts#L20">elements/Node.ts:20</a></p>
+<hr />
+<h3 id="signalid">signalId<a class="headerlink" href="#signalid" title="Permanent link">#</a></h3>
+<p>• <strong>signalId</strong>: <code>any</code></p>
+<h4 id="inherited-from_15">Inherited from<a class="headerlink" href="#inherited-from_15" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#signalid">signalId</a></p>
+<h4 id="defined-in_15">Defined in<a class="headerlink" href="#defined-in_15" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Node.ts#L21">elements/Node.ts:21</a></p>
+<hr />
+<h3 id="initiator">initiator<a class="headerlink" href="#initiator" title="Permanent link">#</a></h3>
+<p>• <strong>initiator</strong>: <code>any</code></p>
+<h4 id="inherited-from_16">Inherited from<a class="headerlink" href="#inherited-from_16" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#initiator">initiator</a></p>
+<h4 id="defined-in_16">Defined in<a class="headerlink" href="#defined-in_16" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Node.ts#L22">elements/Node.ts:22</a></p>
+<hr />
+<h3 id="assignee">assignee<a class="headerlink" href="#assignee" title="Permanent link">#</a></h3>
+<p>• <strong>assignee</strong>: <code>any</code></p>
+<h4 id="inherited-from_17">Inherited from<a class="headerlink" href="#inherited-from_17" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#assignee">assignee</a></p>
+<h4 id="defined-in_17">Defined in<a class="headerlink" href="#defined-in_17" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Node.ts#L23">elements/Node.ts:23</a></p>
+<hr />
+<h3 id="candidategroups">candidateGroups<a class="headerlink" href="#candidategroups" title="Permanent link">#</a></h3>
+<p>• <strong>candidateGroups</strong>: <code>any</code></p>
+<h4 id="inherited-from_18">Inherited from<a class="headerlink" href="#inherited-from_18" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#candidategroups">candidateGroups</a></p>
+<h4 id="defined-in_18">Defined in<a class="headerlink" href="#defined-in_18" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Node.ts#L24">elements/Node.ts:24</a></p>
+<hr />
+<h3 id="candidateusers">candidateUsers<a class="headerlink" href="#candidateusers" title="Permanent link">#</a></h3>
+<p>• <strong>candidateUsers</strong>: <code>any</code></p>
+<h4 id="inherited-from_19">Inherited from<a class="headerlink" href="#inherited-from_19" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#candidateusers">candidateUsers</a></p>
+<h4 id="defined-in_19">Defined in<a class="headerlink" href="#defined-in_19" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Node.ts#L25">elements/Node.ts:25</a></p>
+<hr />
+<h3 id="scripts">scripts<a class="headerlink" href="#scripts" title="Permanent link">#</a></h3>
+<p>• <strong>scripts</strong>: <code>Map</code>\&lt;<code>any</code>, <code>any</code>&gt;</p>
+<h4 id="inherited-from_20">Inherited from<a class="headerlink" href="#inherited-from_20" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#scripts">scripts</a></p>
+<h4 id="defined-in_20">Defined in<a class="headerlink" href="#defined-in_20" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Node.ts#L26">elements/Node.ts:26</a></p>
+<h2 id="accessors_1">Accessors<a class="headerlink" href="#accessors_1" title="Permanent link">#</a></h2>
+<h3 id="processid">processId<a class="headerlink" href="#processid" title="Permanent link">#</a></h3>
+<p>• <code>get</code> <strong>processId</strong>(): <code>any</code></p>
+<h4 id="returns_1">Returns<a class="headerlink" href="#returns_1" title="Permanent link">#</a></h4>
+<p><code>any</code></p>
+<h4 id="inherited-from_21">Inherited from<a class="headerlink" href="#inherited-from_21" title="Permanent link">#</a></h4>
+<p>Node.processId</p>
+<h4 id="defined-in_21">Defined in<a class="headerlink" href="#defined-in_21" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Node.ts#L27">elements/Node.ts:27</a></p>
+<hr />
+<h3 id="requireswait">requiresWait<a class="headerlink" href="#requireswait" title="Permanent link">#</a></h3>
+<p>• <code>get</code> <strong>requiresWait</strong>(): <code>boolean</code></p>
+<h4 id="returns_2">Returns<a class="headerlink" href="#returns_2" title="Permanent link">#</a></h4>
+<p><code>boolean</code></p>
+<h4 id="inherited-from_22">Inherited from<a class="headerlink" href="#inherited-from_22" title="Permanent link">#</a></h4>
+<p>Node.requiresWait</p>
+<h4 id="defined-in_22">Defined in<a class="headerlink" href="#defined-in_22" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Node.ts#L124">elements/Node.ts:124</a></p>
+<hr />
+<h3 id="canbeinvoked">canBeInvoked<a class="headerlink" href="#canbeinvoked" title="Permanent link">#</a></h3>
+<p>• <code>get</code> <strong>canBeInvoked</strong>(): <code>boolean</code></p>
+<h4 id="returns_3">Returns<a class="headerlink" href="#returns_3" title="Permanent link">#</a></h4>
+<p><code>boolean</code></p>
+<h4 id="inherited-from_23">Inherited from<a class="headerlink" href="#inherited-from_23" title="Permanent link">#</a></h4>
+<p>Node.canBeInvoked</p>
+<h4 id="defined-in_23">Defined in<a class="headerlink" href="#defined-in_23" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Node.ts#L129">elements/Node.ts:129</a></p>
+<hr />
+<h3 id="iscatching">isCatching<a class="headerlink" href="#iscatching" title="Permanent link">#</a></h3>
+<p>• <code>get</code> <strong>isCatching</strong>(): <code>boolean</code></p>
+<h4 id="returns_4">Returns<a class="headerlink" href="#returns_4" title="Permanent link">#</a></h4>
+<p><code>boolean</code></p>
+<h4 id="inherited-from_24">Inherited from<a class="headerlink" href="#inherited-from_24" title="Permanent link">#</a></h4>
+<p>Node.isCatching</p>
+<h4 id="defined-in_24">Defined in<a class="headerlink" href="#defined-in_24" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Node.ts#L131">elements/Node.ts:131</a></p>
+<h2 id="methods_1">Methods<a class="headerlink" href="#methods_1" title="Permanent link">#</a></h2>
+<h3 id="restored">restored<a class="headerlink" href="#restored" title="Permanent link">#</a></h3>
+<p>▸ <strong>restored</strong>(<code>item</code>): <code>void</code></p>
+<h4 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>item</code></td>
+<td style="text-align: left;"><a href="../Item/"><code>Item</code></a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_5">Returns<a class="headerlink" href="#returns_5" title="Permanent link">#</a></h4>
+<p><code>void</code></p>
+<h4 id="inherited-from_25">Inherited from<a class="headerlink" href="#inherited-from_25" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#restored">restored</a></p>
+<h4 id="defined-in_25">Defined in<a class="headerlink" href="#defined-in_25" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Element.ts#L24">elements/Element.ts:24</a></p>
+<hr />
+<h3 id="hasbehaviour">hasBehaviour<a class="headerlink" href="#hasbehaviour" title="Permanent link">#</a></h3>
+<p>▸ <strong>hasBehaviour</strong>(<code>name</code>): <code>boolean</code></p>
+<p>respond by providing behaviour attributes beyond item and node information
+ ex: timer due , input/outupt , fields</p>
+<h4 id="parameters_2">Parameters<a class="headerlink" href="#parameters_2" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>name</code></td>
+<td style="text-align: left;"><code>any</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_6">Returns<a class="headerlink" href="#returns_6" title="Permanent link">#</a></h4>
+<p><code>boolean</code></p>
+<h4 id="inherited-from_26">Inherited from<a class="headerlink" href="#inherited-from_26" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#hasbehaviour">hasBehaviour</a></p>
+<h4 id="defined-in_26">Defined in<a class="headerlink" href="#defined-in_26" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Element.ts#L34">elements/Element.ts:34</a></p>
+<hr />
+<h3 id="getbehaviour">getBehaviour<a class="headerlink" href="#getbehaviour" title="Permanent link">#</a></h3>
+<p>▸ <strong>getBehaviour</strong>(<code>name</code>): <code>any</code></p>
+<h4 id="parameters_3">Parameters<a class="headerlink" href="#parameters_3" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>name</code></td>
+<td style="text-align: left;"><code>any</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_7">Returns<a class="headerlink" href="#returns_7" title="Permanent link">#</a></h4>
+<p><code>any</code></p>
+<h4 id="inherited-from_27">Inherited from<a class="headerlink" href="#inherited-from_27" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#getbehaviour">getBehaviour</a></p>
+<h4 id="defined-in_27">Defined in<a class="headerlink" href="#defined-in_27" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Element.ts#L38">elements/Element.ts:38</a></p>
+<hr />
+<h3 id="addbehaviour">addBehaviour<a class="headerlink" href="#addbehaviour" title="Permanent link">#</a></h3>
+<p>▸ <strong>addBehaviour</strong>(<code>nane</code>, <code>behavriour</code>): <code>void</code></p>
+<h4 id="parameters_4">Parameters<a class="headerlink" href="#parameters_4" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>nane</code></td>
+<td style="text-align: left;"><code>any</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>behavriour</code></td>
+<td style="text-align: left;"><code>any</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_8">Returns<a class="headerlink" href="#returns_8" title="Permanent link">#</a></h4>
+<p><code>void</code></p>
+<h4 id="inherited-from_28">Inherited from<a class="headerlink" href="#inherited-from_28" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#addbehaviour">addBehaviour</a></p>
+<h4 id="defined-in_28">Defined in<a class="headerlink" href="#defined-in_28" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Element.ts#L41">elements/Element.ts:41</a></p>
+<hr />
+<h3 id="validate">validate<a class="headerlink" href="#validate" title="Permanent link">#</a></h3>
+<p>▸ <strong>validate</strong>(<code>item</code>): <code>Promise</code>\&lt;<code>void</code>&gt;</p>
+<h4 id="parameters_5">Parameters<a class="headerlink" href="#parameters_5" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>item</code></td>
+<td style="text-align: left;"><a href="../Item/"><code>Item</code></a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_9">Returns<a class="headerlink" href="#returns_9" title="Permanent link">#</a></h4>
+<p><code>Promise</code>\&lt;<code>void</code>&gt;</p>
+<h4 id="inherited-from_29">Inherited from<a class="headerlink" href="#inherited-from_29" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#validate">validate</a></p>
+<h4 id="defined-in_29">Defined in<a class="headerlink" href="#defined-in_29" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Node.ts#L45">elements/Node.ts:45</a></p>
+<hr />
+<h3 id="doevent">doEvent<a class="headerlink" href="#doevent" title="Permanent link">#</a></h3>
+<p>▸ <strong>doEvent</strong>(<code>item</code>, <code>event</code>, <code>newStatus</code>): <code>Promise</code>\&lt;<code>any</code>[]&gt;</p>
+<h4 id="parameters_6">Parameters<a class="headerlink" href="#parameters_6" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>item</code></td>
+<td style="text-align: left;"><a href="../Item/"><code>Item</code></a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>event</code></td>
+<td style="text-align: left;"><a href="../../enums/EXECUTION_EVENT/"><code>EXECUTION_EVENT</code></a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>newStatus</code></td>
+<td style="text-align: left;"><a href="../../enums/ITEM_STATUS/"><code>ITEM_STATUS</code></a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_10">Returns<a class="headerlink" href="#returns_10" title="Permanent link">#</a></h4>
+<p><code>Promise</code>\&lt;<code>any</code>[]&gt;</p>
+<h4 id="inherited-from_30">Inherited from<a class="headerlink" href="#inherited-from_30" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#doevent">doEvent</a></p>
+<h4 id="defined-in_30">Defined in<a class="headerlink" href="#defined-in_30" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Node.ts#L58">elements/Node.ts:58</a></p>
+<hr />
+<h3 id="setinput">setInput<a class="headerlink" href="#setinput" title="Permanent link">#</a></h3>
+<p>▸ <strong>setInput</strong>(<code>item</code>, <code>input</code>): <code>Promise</code>\&lt;<code>void</code>&gt;</p>
+<p>is Called after execution 
+transform data using input rules
+todo</p>
+<h4 id="parameters_7">Parameters<a class="headerlink" href="#parameters_7" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>item</code></td>
+<td style="text-align: left;"><a href="../Item/"><code>Item</code></a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>input</code></td>
+<td style="text-align: left;"><code>any</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_11">Returns<a class="headerlink" href="#returns_11" title="Permanent link">#</a></h4>
+<p><code>Promise</code>\&lt;<code>void</code>&gt;</p>
+<h4 id="inherited-from_31">Inherited from<a class="headerlink" href="#inherited-from_31" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#setinput">setInput</a></p>
+<h4 id="defined-in_31">Defined in<a class="headerlink" href="#defined-in_31" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Node.ts#L87">elements/Node.ts:87</a></p>
+<hr />
+<h3 id="getinput">getInput<a class="headerlink" href="#getinput" title="Permanent link">#</a></h3>
+<p>▸ <strong>getInput</strong>(<code>item</code>, <code>input</code>): <code>Promise</code>\&lt;{}&gt;</p>
+<h4 id="parameters_8">Parameters<a class="headerlink" href="#parameters_8" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>item</code></td>
+<td style="text-align: left;"><a href="../Item/"><code>Item</code></a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>input</code></td>
+<td style="text-align: left;"><code>any</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_12">Returns<a class="headerlink" href="#returns_12" title="Permanent link">#</a></h4>
+<p><code>Promise</code>\&lt;{}&gt;</p>
+<h4 id="inherited-from_32">Inherited from<a class="headerlink" href="#inherited-from_32" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#getinput">getInput</a></p>
+<h4 id="defined-in_32">Defined in<a class="headerlink" href="#defined-in_32" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Node.ts#L97">elements/Node.ts:97</a></p>
+<hr />
+<h3 id="getoutput">getOutput<a class="headerlink" href="#getoutput" title="Permanent link">#</a></h3>
+<p>▸ <strong>getOutput</strong>(<code>item</code>): <code>Promise</code>\&lt;{}&gt;</p>
+<p>transform data using output rules
+todo</p>
+<h4 id="parameters_9">Parameters<a class="headerlink" href="#parameters_9" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>item</code></td>
+<td style="text-align: left;"><a href="../Item/"><code>Item</code></a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_13">Returns<a class="headerlink" href="#returns_13" title="Permanent link">#</a></h4>
+<p><code>Promise</code>\&lt;{}&gt;</p>
+<h4 id="inherited-from_33">Inherited from<a class="headerlink" href="#inherited-from_33" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#getoutput">getOutput</a></p>
+<h4 id="defined-in_33">Defined in<a class="headerlink" href="#defined-in_33" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Node.ts#L111">elements/Node.ts:111</a></p>
+<hr />
+<h3 id="enter">enter<a class="headerlink" href="#enter" title="Permanent link">#</a></h3>
+<p>▸ <strong>enter</strong>(<code>item</code>): <code>void</code></p>
+<h4 id="parameters_10">Parameters<a class="headerlink" href="#parameters_10" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>item</code></td>
+<td style="text-align: left;"><a href="../Item/"><code>Item</code></a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_14">Returns<a class="headerlink" href="#returns_14" title="Permanent link">#</a></h4>
+<p><code>void</code></p>
+<h4 id="inherited-from_34">Inherited from<a class="headerlink" href="#inherited-from_34" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#enter">enter</a></p>
+<h4 id="defined-in_34">Defined in<a class="headerlink" href="#defined-in_34" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Node.ts#L115">elements/Node.ts:115</a></p>
+<hr />
+<h3 id="execute">execute<a class="headerlink" href="#execute" title="Permanent link">#</a></h3>
+<p>▸ <strong>execute</strong>(<code>item</code>): <code>Promise</code>\&lt;<code>void</code> | <a href="../../enums/NODE_ACTION/#wait"><code>wait</code></a> | <a href="../../enums/NODE_ACTION/#end"><code>end</code></a> | <a href="../../enums/NODE_ACTION/#error"><code>error</code></a> | <a href="../../enums/NODE_ACTION/#abort"><code>abort</code></a>&gt;</p>
+<p>this is the primary exectuion method for a node</p>
+<p>considerations: the following are handled by Token
+     1.  Loops we are inside a loop already (if any)
+     2.  Gatways 
+     3.  Subprocess the parent node is fired as normal
+             run method will fire the subprocess invoking a new token and will go into wait</p>
+<h4 id="parameters_11">Parameters<a class="headerlink" href="#parameters_11" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>item</code></td>
+<td style="text-align: left;"><a href="../Item/"><code>Item</code></a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_15">Returns<a class="headerlink" href="#returns_15" title="Permanent link">#</a></h4>
+<p><code>Promise</code>\&lt;<code>void</code> | <a href="../../enums/NODE_ACTION/#wait"><code>wait</code></a> | <a href="../../enums/NODE_ACTION/#end"><code>end</code></a> | <a href="../../enums/NODE_ACTION/#error"><code>error</code></a> | <a href="../../enums/NODE_ACTION/#abort"><code>abort</code></a>&gt;</p>
+<h4 id="inherited-from_35">Inherited from<a class="headerlink" href="#inherited-from_35" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#execute">execute</a></p>
+<h4 id="defined-in_35">Defined in<a class="headerlink" href="#defined-in_35" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Node.ts#L141">elements/Node.ts:141</a></p>
+<hr />
+<h3 id="continue">continue<a class="headerlink" href="#continue" title="Permanent link">#</a></h3>
+<p>▸ <strong>continue</strong>(<code>item</code>): <code>Promise</code>\&lt;<code>void</code>&gt;</p>
+<h4 id="parameters_12">Parameters<a class="headerlink" href="#parameters_12" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>item</code></td>
+<td style="text-align: left;"><a href="../Item/"><code>Item</code></a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_16">Returns<a class="headerlink" href="#returns_16" title="Permanent link">#</a></h4>
+<p><code>Promise</code>\&lt;<code>void</code>&gt;</p>
+<h4 id="inherited-from_36">Inherited from<a class="headerlink" href="#inherited-from_36" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#continue">continue</a></p>
+<h4 id="defined-in_36">Defined in<a class="headerlink" href="#defined-in_36" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Node.ts#L214">elements/Node.ts:214</a></p>
+<hr />
+<h3 id="start">start<a class="headerlink" href="#start" title="Permanent link">#</a></h3>
+<p>▸ <strong>start</strong>(<code>item</code>): <code>Promise</code>\&lt;<a href="../../enums/NODE_ACTION/"><code>NODE_ACTION</code></a>&gt;</p>
+<h4 id="parameters_13">Parameters<a class="headerlink" href="#parameters_13" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>item</code></td>
+<td style="text-align: left;"><a href="../Item/"><code>Item</code></a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_17">Returns<a class="headerlink" href="#returns_17" title="Permanent link">#</a></h4>
+<p><code>Promise</code>\&lt;<a href="../../enums/NODE_ACTION/"><code>NODE_ACTION</code></a>&gt;</p>
+<h4 id="inherited-from_37">Inherited from<a class="headerlink" href="#inherited-from_37" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#start">start</a></p>
+<h4 id="defined-in_37">Defined in<a class="headerlink" href="#defined-in_37" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Node.ts#L219">elements/Node.ts:219</a></p>
+<hr />
+<h3 id="cancelebg">cancelEBG<a class="headerlink" href="#cancelebg" title="Permanent link">#</a></h3>
+<p>▸ <strong>cancelEBG</strong>(<code>item</code>): <code>Promise</code>\&lt;<code>void</code>&gt;</p>
+<h4 id="parameters_14">Parameters<a class="headerlink" href="#parameters_14" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>item</code></td>
+<td style="text-align: left;"><code>any</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_18">Returns<a class="headerlink" href="#returns_18" title="Permanent link">#</a></h4>
+<p><code>Promise</code>\&lt;<code>void</code>&gt;</p>
+<h4 id="inherited-from_38">Inherited from<a class="headerlink" href="#inherited-from_38" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#cancelebg">cancelEBG</a></p>
+<h4 id="defined-in_38">Defined in<a class="headerlink" href="#defined-in_38" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Node.ts#L233">elements/Node.ts:233</a></p>
+<hr />
+<h3 id="cancelboundaryevents">cancelBoundaryEvents<a class="headerlink" href="#cancelboundaryevents" title="Permanent link">#</a></h3>
+<p>▸ <strong>cancelBoundaryEvents</strong>(<code>item</code>): <code>Promise</code>\&lt;<code>void</code>&gt;</p>
+<h4 id="parameters_15">Parameters<a class="headerlink" href="#parameters_15" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>item</code></td>
+<td style="text-align: left;"><code>any</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_19">Returns<a class="headerlink" href="#returns_19" title="Permanent link">#</a></h4>
+<p><code>Promise</code>\&lt;<code>void</code>&gt;</p>
+<h4 id="inherited-from_39">Inherited from<a class="headerlink" href="#inherited-from_39" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#cancelboundaryevents">cancelBoundaryEvents</a></p>
+<h4 id="defined-in_39">Defined in<a class="headerlink" href="#defined-in_39" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Node.ts#L241">elements/Node.ts:241</a></p>
+<hr />
+<h3 id="end">end<a class="headerlink" href="#end" title="Permanent link">#</a></h3>
+<p>▸ <strong>end</strong>(<code>item</code>, <code>cancel?</code>): <code>Promise</code>\&lt;<code>void</code>&gt;</p>
+<h4 id="parameters_16">Parameters<a class="headerlink" href="#parameters_16" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>item</code></td>
+<td style="text-align: left;"><a href="../Item/"><code>Item</code></a></td>
+<td style="text-align: left;"><code>undefined</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>cancel</code></td>
+<td style="text-align: left;"><code>Boolean</code></td>
+<td style="text-align: left;"><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_20">Returns<a class="headerlink" href="#returns_20" title="Permanent link">#</a></h4>
+<p><code>Promise</code>\&lt;<code>void</code>&gt;</p>
+<h4 id="inherited-from_40">Inherited from<a class="headerlink" href="#inherited-from_40" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#end">end</a></p>
+<h4 id="defined-in_40">Defined in<a class="headerlink" href="#defined-in_40" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Node.ts#L274">elements/Node.ts:274</a></p>
+<hr />
+<h3 id="resume">resume<a class="headerlink" href="#resume" title="Permanent link">#</a></h3>
+<p>▸ <strong>resume</strong>(<code>item</code>): <code>void</code></p>
+<p>is called by the token after an execution resume for every active (in wait) item
+different than init, which is called for all items</p>
+<h4 id="parameters_17">Parameters<a class="headerlink" href="#parameters_17" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>item</code></td>
+<td style="text-align: left;"><a href="../Item/"><code>Item</code></a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_21">Returns<a class="headerlink" href="#returns_21" title="Permanent link">#</a></h4>
+<p><code>void</code></p>
+<h4 id="inherited-from_41">Inherited from<a class="headerlink" href="#inherited-from_41" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#resume">resume</a></p>
+<h4 id="defined-in_41">Defined in<a class="headerlink" href="#defined-in_41" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Node.ts#L309">elements/Node.ts:309</a></p>
+<hr />
+<h3 id="init">init<a class="headerlink" href="#init" title="Permanent link">#</a></h3>
+<p>▸ <strong>init</strong>(<code>item</code>): <code>void</code></p>
+<h4 id="parameters_18">Parameters<a class="headerlink" href="#parameters_18" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>item</code></td>
+<td style="text-align: left;"><a href="../Item/"><code>Item</code></a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_22">Returns<a class="headerlink" href="#returns_22" title="Permanent link">#</a></h4>
+<p><code>void</code></p>
+<h4 id="inherited-from_42">Inherited from<a class="headerlink" href="#inherited-from_42" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#init">init</a></p>
+<h4 id="defined-in_42">Defined in<a class="headerlink" href="#defined-in_42" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Node.ts#L312">elements/Node.ts:312</a></p>
+<hr />
+<h3 id="getoutbounds">getOutbounds<a class="headerlink" href="#getoutbounds" title="Permanent link">#</a></h3>
+<p>▸ <strong>getOutbounds</strong>(<code>item</code>): <a href="../Item/"><code>Item</code></a>[]</p>
+<h4 id="parameters_19">Parameters<a class="headerlink" href="#parameters_19" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>item</code></td>
+<td style="text-align: left;"><a href="../Item/"><code>Item</code></a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_23">Returns<a class="headerlink" href="#returns_23" title="Permanent link">#</a></h4>
+<p><a href="../Item/"><code>Item</code></a>[]</p>
+<h4 id="inherited-from_43">Inherited from<a class="headerlink" href="#inherited-from_43" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#getoutbounds">getOutbounds</a></p>
+<h4 id="defined-in_43">Defined in<a class="headerlink" href="#defined-in_43" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Node.ts#L317">elements/Node.ts:317</a></p>
+<hr />
+<h3 id="startboundaryevents">startBoundaryEvents<a class="headerlink" href="#startboundaryevents" title="Permanent link">#</a></h3>
+<p>▸ <strong>startBoundaryEvents</strong>(<code>item</code>, <code>token</code>): <code>Promise</code>\&lt;<code>void</code>&gt;</p>
+<h4 id="parameters_20">Parameters<a class="headerlink" href="#parameters_20" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>item</code></td>
+<td style="text-align: left;"><code>any</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>token</code></td>
+<td style="text-align: left;"><code>any</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_24">Returns<a class="headerlink" href="#returns_24" title="Permanent link">#</a></h4>
+<p><code>Promise</code>\&lt;<code>void</code>&gt;</p>
+<h4 id="inherited-from_44">Inherited from<a class="headerlink" href="#inherited-from_44" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#startboundaryevents">startBoundaryEvents</a></p>
+<h4 id="defined-in_44">Defined in<a class="headerlink" href="#defined-in_44" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Node.ts#L336">elements/Node.ts:336</a></p>
+<hr />
+<h3 id="describe">describe<a class="headerlink" href="#describe" title="Permanent link">#</a></h3>
+<p>▸ <strong>describe</strong>(): <code>any</code>[]</p>
+<h4 id="returns_25">Returns<a class="headerlink" href="#returns_25" title="Permanent link">#</a></h4>
+<p><code>any</code>[]</p>
+<h4 id="inherited-from_45">Inherited from<a class="headerlink" href="#inherited-from_45" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#describe">describe</a></p>
+<h4 id="defined-in_45">Defined in<a class="headerlink" href="#defined-in_45" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Node.ts#L347">elements/Node.ts:347</a></p>
+<hr />
+<h3 id="run">run<a class="headerlink" href="#run" title="Permanent link">#</a></h3>
+<p>▸ <strong>run</strong>(<code>item</code>): <code>Promise</code>\&lt;<a href="../../enums/NODE_ACTION/"><code>NODE_ACTION</code></a>&gt;</p>
+<h4 id="parameters_21">Parameters<a class="headerlink" href="#parameters_21" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>item</code></td>
+<td style="text-align: left;"><code>any</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_26">Returns<a class="headerlink" href="#returns_26" title="Permanent link">#</a></h4>
+<p><code>Promise</code>\&lt;<a href="../../enums/NODE_ACTION/"><code>NODE_ACTION</code></a>&gt;</p>
+<h4 id="overrides">Overrides<a class="headerlink" href="#overrides" title="Permanent link">#</a></h4>
+<p><a href="../Node/">Node</a>.<a href="../Node/#run">run</a></p>
+<h4 id="defined-in_46">Defined in<a class="headerlink" href="#defined-in_46" title="Permanent link">#</a></h4>
+<p><a href="https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Tasks.ts#L16">elements/Tasks.ts:16</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.tooltips", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.footer"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+    
+  </body>
+</html>
