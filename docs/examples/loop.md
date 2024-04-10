@@ -1,5 +1,21 @@
 # Multi-instance Tasks (loops):
 
+
+![Using Modeler](../images/bb-multi-instance.PNG){align=left}
+
+
+```xml
+    <bpmn:scriptTask id="scriptTask" name="Script Task">
+      <bpmn:incoming>Flow_159xzcz</bpmn:incoming>
+      <bpmn:outgoing>Flow_0t7z2os</bpmn:outgoing>
+      <bpmn:multiInstanceLoopCharacteristics isSequential="true" 
+        camunda:collection="$(data.records)" />
+      <bpmn:script><![CDATA[this.log('testing from the inside: '+data.loopKey);]]></bpmn:script>
+    </bpmn:scriptTask>
+```
+
+<div style="clear:both"></div>
+
 Any Task can have multi-instance either Sequential or Parrallel
 
 Loops have a unique data structure to support multiple items for same node with each of unique data
@@ -96,6 +112,8 @@ Vote for: Billing 80
 
     });
 ```
+In Addition, `item.itemKey` is populated with the key value to facilitate data search:
+
 - Search for a particular item by key:
 ```json
     let items=await api.data.findItems({"items.elementId":'Activity_vote',"items.itemKey":"HR"});

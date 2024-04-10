@@ -1,5 +1,19 @@
 # Timers
 
+
+![Using Modeler](images/bb-timer.PNG){align=left}
+
+```xml
+    <bpmn:intermediateCatchEvent id="Event_timer">
+      <bpmn:incoming>Flow_1sg7v2d</bpmn:incoming>
+      <bpmn:outgoing>Flow_1nku8og</bpmn:outgoing>
+      <bpmn:timerEventDefinition id="TimerEventDefinition_07xu06a">
+        <bpmn:timeDuration xsi:type="bpmn:tExpression">PT2S</bpmn:timeDuration>
+      </bpmn:timerEventDefinition>
+    </bpmn:intermediateCatchEvent>
+```
+<div style="clear:both"></div>
+
 All Timers are persisted, therefore, if the Node.js session is restared timers will pickup where they left     
 ## Timer Types
 

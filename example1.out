@@ -1,9 +1,15 @@
 # Managing Data
 
-<!--include "include1.txt" -->
+<!--include "include1.md#Heading 1" -->
+## Heading 1
+
 line 1
 line 2
+
+### SubHeading A
+
 line 3
+
 <!--include -->
 
 ## Introduction

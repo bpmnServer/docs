@@ -1,6 +1,6 @@
 # Managing Data
 
-<!--include "include1.txt" -->
+<!--include "include1.md#Heading 1" -->
 
 sampel here
 

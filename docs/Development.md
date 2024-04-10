@@ -1,14 +1,27 @@
-# Development
+# Development Environemnt
 
-## Code
+To Create a new Development Enviroment:
 
-## Document
+1. Create a dev folder
+2. git clone the repos under the folder
+-    bpmn-server
+-    bpmn-web
+-    bpmn-client
+-    docs
 
-```sh
-npm run docs:generate
-npm run docs:dev
+3.  change dependecy of bpmn-web to the folder ../bpmn-server, by:
+```
+    npm i ../bpmn-server
+
 ```
 
-The `docs:generate` will generate API doc from TS code and JSDocs in the comments of TS files. And also copy README.md to the docs folder, so it can be recognized by docusaurus.
+4. to Publish changes:
+    use git push as usual for all repo
+    for bpmn-server:
+        npm publish
+    for docs
+        mkdocs gh-deploy
 
-`docs:dev` start the doc site locally using docusaurus, you can modify its config at docusaurus.config.ts. It basically turn all markdown files in docs folder into our doc site.
+New Debugger
+------------
+server.engine.debug(queryForItem,scriptToRun)

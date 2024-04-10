@@ -12,6 +12,19 @@
       <bpmn2:errorEventDefinition />
     </bpmn2:endEvent>
 ```
+### Through Tasks
+
+Also Scripts and Services Tasks can Raise BPMN Errors/Escalation/Exception 
+
+    return {bpmnError:'error code'};
+All Scripts and Services can Raise BPMN Escalation, to be handled by the appropriate Catch Escalation Event
+
+    return {escalation:'escalation code'};
+The current item status will be error and execution will continue at the Error node.
+Throwing Exceptions#
+
+    new error('error message');
+This will raise an Excption, stop workflow execution and save the instance datatake action
 
 ## Error Handling
 

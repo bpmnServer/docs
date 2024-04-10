@@ -65,7 +65,7 @@ nav:
 - bpmn-server:
   - Overview:  index.md
   - 'Invoking Workflows': invokation.md 
-  - 'Execution': execution.md
+  - 'Workflow Execution': execution.md
   - 'Scripting': scripting.md
   - 'Security': security.md
   - 'Data': data.md 
@@ -82,13 +82,25 @@ nav:
   - 'Client API': client-api.md
 
 - Examples/Features:
-  - 'Examples': examples.md 
+  - 'Service Task': examples/serviceTask.md
+  - 'Script Task': examples/scriptTask.md
+  - 'Conditional Flow': examples/conditionalFlow.md
+  - 'Scripts Listeners': examples/scriptEvents.md
+  - 'Gateways': examples/gateways.md
+  - 'Event Based Gateway': examples/ebg.md
+  - 'Multiple Start Events': examples/multiStartEvent.md
+  - 'Input Fields': examples/inputFields.md
+  - 'Throwing/Catching Messages': examples/msg-throw-catch.md
   - 'Boundary Events': examples/boundary-events.md
-  - 'Event Based Gateway': examples/gateway.md
-  - 'Error Events': examples/error_events.md
-  - 'loop': examples/loop.md
+  - 'Error/Escalate Events': examples/error_events.md
+  - 'Call Process': examples/callProcess.md
+  - 'Multi-instances (loop)': examples/loop.md
   - 'UserTask Assignment': security.md
   - 'Timers': timers.md
+  - 'SubProcess': examples/subProcess.md
+  - 'Transactions': examples/transactions.md
+  - 'Ad Hoc SubProcess': examples/adHoc.md
+ 
 - API:
   - 'API Summary': api-summary.md
   - 'API Example': examples//BuyCar-Server.md
