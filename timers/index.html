@@ -12,7 +12,7 @@
         <link rel="prev" href="../security/">
       
       
-        <link rel="next" href="../api-summary/">
+        <link rel="next" href="../examples/subProcess/">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -269,7 +269,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../examples/" class="md-tabs__link">
+        <a href="../examples/serviceTask/" class="md-tabs__link">
           
   
   Examples/Features
@@ -444,7 +444,7 @@
         
   
   <span class="md-ellipsis">
-    Execution
+    Workflow Execution
   </span>
   
 
@@ -838,11 +838,179 @@
   
   
     <li class="md-nav__item">
-      <a href="../examples/" class="md-nav__link">
+      <a href="../examples/serviceTask/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Examples
+    Service Task
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/scriptTask/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Script Task
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/conditionalFlow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conditional Flow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/scriptEvents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scripts Listeners
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/gateways/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gateways
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/ebg/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Event Based Gateway
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/multiStartEvent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multiple Start Events
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/inputFields/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Input Fields
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/msg-throw-catch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Throwing/Catching Messages
   </span>
   
 
@@ -880,11 +1048,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../examples/gateway/" class="md-nav__link">
+      <a href="../examples/error_events/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Event Based Gateway
+    Error/Escalate Events
   </span>
   
 
@@ -901,11 +1069,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../examples/error_events/" class="md-nav__link">
+      <a href="../examples/callProcess/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Error Events
+    Call Process
   </span>
   
 
@@ -926,7 +1094,7 @@
         
   
   <span class="md-ellipsis">
-    loop
+    Multi-instances (loop)
   </span>
   
 
@@ -1102,6 +1270,69 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/subProcess/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SubProcess
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/transactions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transactions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/adHoc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ad Hoc SubProcess
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1238,42 +1469,53 @@
 
 
 <h1 id="timers">Timers<a class="headerlink" href="#timers" title="Permanent link">#</a></h1>
+<p><img align="left" alt="Using Modeler" src="../images/bb-timer.PNG" /></p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">    </span><span class="nt">&lt;bpmn:intermediateCatchEvent</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;Event_timer&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">      </span><span class="nt">&lt;bpmn:incoming&gt;</span>Flow_1sg7v2d<span class="nt">&lt;/bpmn:incoming&gt;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">      </span><span class="nt">&lt;bpmn:outgoing&gt;</span>Flow_1nku8og<span class="nt">&lt;/bpmn:outgoing&gt;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">      </span><span class="nt">&lt;bpmn:timerEventDefinition</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;TimerEventDefinition_07xu06a&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="nt">&lt;bpmn:timeDuration</span><span class="w"> </span><span class="na">xsi:type=</span><span class="s">&quot;bpmn:tExpression&quot;</span><span class="nt">&gt;</span>PT2S<span class="nt">&lt;/bpmn:timeDuration&gt;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">      </span><span class="nt">&lt;/bpmn:timerEventDefinition&gt;</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nt">&lt;/bpmn:intermediateCatchEvent&gt;</span>
+</span></code></pre></div>
+<div style="clear:both"></div>
+
 <p>All Timers are persisted, therefore, if the Node.js session is restared timers will pickup where they left     </p>
 <h2 id="timer-types">Timer Types<a class="headerlink" href="#timer-types" title="Permanent link">#</a></h2>
 <h3 id="datetime-not-supported">DateTime (not supported)<a class="headerlink" href="#datetime-not-supported" title="Permanent link">#</a></h3>
-<div class="language-ts highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">  </span><span class="o">&lt;</span><span class="nx">timerEventDefinition</span><span class="o">&gt;</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">timeDate</span><span class="o">&gt;</span><span class="mf">2011</span><span class="o">-</span><span class="mo">03</span><span class="o">-</span><span class="nx">11T12</span><span class="o">:</span><span class="kt">13</span><span class="o">:</span><span class="mf">14</span><span class="nx">Z</span><span class="o">&lt;</span><span class="err">/timeDate&gt;</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/timerEventDefinition&gt;</span>
+<div class="language-ts highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">  </span><span class="o">&lt;</span><span class="nx">timerEventDefinition</span><span class="o">&gt;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">timeDate</span><span class="o">&gt;</span><span class="mf">2011</span><span class="o">-</span><span class="mo">03</span><span class="o">-</span><span class="nx">11T12</span><span class="o">:</span><span class="kt">13</span><span class="o">:</span><span class="mf">14</span><span class="nx">Z</span><span class="o">&lt;</span><span class="err">/timeDate&gt;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/timerEventDefinition&gt;</span>
 </span></code></pre></div>
 <h3 id="duration">Duration<a class="headerlink" href="#duration" title="Permanent link">#</a></h3>
 <p>Example (interval lasting 10 days):</p>
-<div class="language-ts highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">timerEventDefinition</span><span class="o">&gt;</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">timeDuration</span><span class="o">&gt;</span><span class="nx">P10D</span><span class="o">&lt;</span><span class="err">/timeDuration&gt;</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/timerEventDefinition&gt;</span>
+<div class="language-ts highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">timerEventDefinition</span><span class="o">&gt;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">timeDuration</span><span class="o">&gt;</span><span class="nx">P10D</span><span class="o">&lt;</span><span class="err">/timeDuration&gt;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/timerEventDefinition&gt;</span>
 </span></code></pre></div>
 <h3 id="time-cycle">Time Cycle<a class="headerlink" href="#time-cycle" title="Permanent link">#</a></h3>
 <p>Example (3 repeating intervals, each lasting 10 hours):</p>
-<div class="language-ts highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">timerEventDefinition</span><span class="o">&gt;</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">timeCycle</span><span class="o">&gt;</span><span class="nx">R3</span><span class="o">/</span><span class="nx">PT10H</span><span class="o">&lt;</span><span class="err">/timeCycle&gt;</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/timerEventDefinition&gt;</span>
+<div class="language-ts highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">timerEventDefinition</span><span class="o">&gt;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">timeCycle</span><span class="o">&gt;</span><span class="nx">R3</span><span class="o">/</span><span class="nx">PT10H</span><span class="o">&lt;</span><span class="err">/timeCycle&gt;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/timerEventDefinition&gt;</span>
 </span></code></pre></div>
 <p>Time Cycle accepts both ISO 8601 format and Cron format</p>
 <p>Example for cron format:</p>
-<div class="language-ts highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">timerEventDefinition</span><span class="o">&gt;</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">bpmn</span><span class="o">:</span><span class="kt">timeCycle</span><span class="w"> </span><span class="nx">xsi</span><span class="o">:</span><span class="kt">type</span><span class="o">=</span><span class="s2">&quot;bpmn:tFormalExpression&quot;</span><span class="o">&gt;</span><span class="mf">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">*&lt;</span><span class="err">/bpmn:timeCycle&gt;</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/timerEventDefinition&gt;</span>
+<div class="language-ts highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">timerEventDefinition</span><span class="o">&gt;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">bpmn</span><span class="o">:</span><span class="kt">timeCycle</span><span class="w"> </span><span class="nx">xsi</span><span class="o">:</span><span class="kt">type</span><span class="o">=</span><span class="s2">&quot;bpmn:tFormalExpression&quot;</span><span class="o">&gt;</span><span class="mf">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">*&lt;</span><span class="err">/bpmn:timeCycle&gt;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/timerEventDefinition&gt;</span>
 </span></code></pre></div>
 <h2 id="developmenttest-environment-timer-modification">Development/Test Environment Timer modification<a class="headerlink" href="#developmenttest-environment-timer-modification" title="Permanent link">#</a></h2>
 <p>bpmn-server allow you to modify the timer behaviour during development without changing bpmn definition</p>
 <p>By changing the configuration.ts to force timers to specific time</p>
-<div class="language-ts highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">definitionsPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">__dirname</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;/processes/&#39;</span><span class="p">;</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kd">var</span><span class="w"> </span><span class="nx">configuration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Configuration</span><span class="p">(</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">        </span><span class="nx">definitionsPath</span><span class="o">:</span><span class="w"> </span><span class="kt">definitionsPath</span><span class="p">,</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">        </span><span class="nx">timers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">            </span><span class="nx">forceTimersDelay</span><span class="o">:</span><span class="w"> </span><span class="kt">1000</span><span class="p">,</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">            </span><span class="nx">precision</span><span class="o">:</span><span class="w"> </span><span class="kt">3000</span><span class="p">,</span>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">        </span><span class="p">},</span>
+<div class="language-ts highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">definitionsPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">__dirname</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;/processes/&#39;</span><span class="p">;</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kd">var</span><span class="w"> </span><span class="nx">configuration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Configuration</span><span class="p">(</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">        </span><span class="nx">definitionsPath</span><span class="o">:</span><span class="w"> </span><span class="kt">definitionsPath</span><span class="p">,</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">        </span><span class="nx">timers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">            </span><span class="nx">forceTimersDelay</span><span class="o">:</span><span class="w"> </span><span class="kt">1000</span><span class="p">,</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">            </span><span class="nx">precision</span><span class="o">:</span><span class="w"> </span><span class="kt">3000</span><span class="p">,</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">        </span><span class="p">},</span>
 </span></code></pre></div>
 <h2 id="event-types">Event Types<a class="headerlink" href="#event-types" title="Permanent link">#</a></h2>
 <table>
@@ -1381,13 +1623,13 @@
         
         
           
-          <a href="../api-summary/" class="md-footer__link md-footer__link--next" aria-label="Next: API Summary">
+          <a href="../examples/subProcess/" class="md-footer__link md-footer__link--next" aria-label="Next: SubProcess">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                API Summary
+                SubProcess
               </div>
             </div>
             <div class="md-footer__button md-icon">
