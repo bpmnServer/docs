@@ -16,7 +16,7 @@
     
     
       
-        <title>Development Environemnt - bpmnServer docs</title>
+        <title>Docker images for bpmn-web - bpmnServer docs</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#development-environemnt" class="md-skip">
+        <a href="#docker-images-for-bpmn-web" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Development Environemnt
+              Docker images for bpmn-web
             
           </span>
         </div>
@@ -1333,41 +1333,31 @@
   
 
 
-<h1 id="development-environemnt">Development Environemnt<a class="headerlink" href="#development-environemnt" title="Permanent link">#</a></h1>
-<p>To Create a new Development Enviroment:</p>
-<ol>
-<li>Create a dev folder</li>
-<li>git clone the repos under the folder</li>
-<li>bpmn-server</li>
-<li>bpmn-web</li>
-<li>bpmn-client</li>
+<h1 id="docker-images-for-bpmn-web">Docker images for bpmn-web<a class="headerlink" href="#docker-images-for-bpmn-web" title="Permanent link">#</a></h1>
+<h2 id="install">Install<a class="headerlink" href="#install" title="Permanent link">#</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git clone https://github.com/bpmnServer/docker.git 
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>cd docker
+</span></code></pre></div>
+<h2 id="docker-operations">Docker operations<a class="headerlink" href="#docker-operations" title="Permanent link">#</a></h2>
+<table>
+<tr><th>Action</th><th>Command</th></tr>
+<tr><td>Start</td><td>>docker compose up -d</td></tr>
+<tr><td>Stop</td><td>>docker compose down</td></tr>
+<tr><td>View Logs</td><td>>docker compose logs -f</td></tr>
+<tr><td>Interactive Session</td><td></td></tr>
+<tr><td>&nbsp&nbsp  in Windows</td><td>>it.cmd</td></tr>
+<tr><td>&nbsp&nbsp  in Linux</td><td>>sh it.sh</td></tr>
+</table>
+
+<h2 id="customize-imagecontainer">Customize Image/Container<a class="headerlink" href="#customize-imagecontainer" title="Permanent link">#</a></h2>
+<ul>
 <li>
-<p>docs</p>
+<p>To customize container edit included <code>docker-compose.yml</code></p>
 </li>
 <li>
-<p>change dependecy of bpmn-web to the folder ../bpmn-server, by:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    npm i ../bpmn-server
-</span></code></pre></div></p>
+<p>To customise image edit <code>image/dockerFile</code></p>
 </li>
-<li>
-<p>to Publish changes:
-    use git push as usual for all repo
-    for bpmn-server:
-        npm publish
-    for docs
-        mkdocs gh-deploy</p>
-</li>
-</ol>
-<h2 id="new-status">New Status:<a class="headerlink" href="#new-status" title="Permanent link">#</a></h2>
-<p>Action: start/invoke etc.
-Internal Action:
-    -   execute a node completed from wait
-    -   gotoNext Node
-    -   goto wait state
-    -   end parent node (like as subprocess)
-    -   cancel /terminate node (like boundary)</p>
-<h2 id="new-debugger">New Debugger<a class="headerlink" href="#new-debugger" title="Permanent link">#</a></h2>
-<p>server.engine.debug(queryForItem,scriptToRun)</p>
+</ul>
 
 
 
