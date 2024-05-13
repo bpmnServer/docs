@@ -2,6 +2,13 @@
 ## Add Security Rules to the Model 
 ## Using WebApp
 ### Enable Security
+
+<!--include "security.md/#demo-application-authentication-and-security" -->
+
+include1.md here
+
+<!--include -->
+
 ### Login in as an Admin
 ### Simulate User1
 

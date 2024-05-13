@@ -63,7 +63,7 @@
 
 #### Defined in
 
-[engine/ScriptHandler.ts:24](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/engine/ScriptHandler.ts#L24)
+[engine/ScriptHandler.ts:26](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/engine/ScriptHandler.ts#L26)
 
 ___
 
@@ -77,7 +77,7 @@ execute JavaScript expression , no need for $
 
 | Name | Type |
 | :------ | :------ |
-| `scope` | `any` |
+| `scope` | [`Item`](Item.md) \| [`Token`](Token.md) |
 | `expression` | `any` |
 
 #### Returns
@@ -86,7 +86,7 @@ execute JavaScript expression , no need for $
 
 #### Defined in
 
-[engine/ScriptHandler.ts:54](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/engine/ScriptHandler.ts#L54)
+[engine/ScriptHandler.ts:56](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/engine/ScriptHandler.ts#L56)
 
 ___
 
@@ -98,7 +98,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `scope` | `any` |
+| `scope` | [`Item`](Item.md) \| [`Execution`](Execution.md) |
 | `script` | `any` |
 
 #### Returns
@@ -107,7 +107,7 @@ ___
 
 #### Defined in
 
-[engine/ScriptHandler.ts:87](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/engine/ScriptHandler.ts#L87)
+[engine/ScriptHandler.ts:90](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/engine/ScriptHandler.ts#L90)
 
 ___
 
@@ -127,4 +127,4 @@ ___
 
 #### Defined in
 
-[engine/ScriptHandler.ts:130](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/engine/ScriptHandler.ts#L130)
+[engine/ScriptHandler.ts:134](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/engine/ScriptHandler.ts#L134)

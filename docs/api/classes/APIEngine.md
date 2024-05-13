@@ -59,7 +59,7 @@ APIComponent.constructor
 
 #### Defined in
 
-[API/API.ts:44](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/API/API.ts#L44)
+[API/API.ts:44](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/API/API.ts#L44)
 
 ## Properties
 
@@ -73,7 +73,7 @@ APIComponent.api
 
 #### Defined in
 
-[API/API.ts:42](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/API/API.ts#L42)
+[API/API.ts:42](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/API/API.ts#L42)
 
 ## Accessors
 
@@ -91,7 +91,7 @@ APIComponent.server
 
 #### Defined in
 
-[API/API.ts:47](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/API/API.ts#L47)
+[API/API.ts:47](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/API/API.ts#L47)
 
 ## Methods
 
@@ -115,7 +115,7 @@ APIComponent.getUser
 
 #### Defined in
 
-[API/API.ts:50](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/API/API.ts#L50)
+[API/API.ts:50](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/API/API.ts#L50)
 
 ___
 
@@ -144,7 +144,7 @@ start a new Instance of specified model
 
 #### Defined in
 
-[API/API.ts:220](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/API/API.ts#L220)
+[API/API.ts:220](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/API/API.ts#L220)
 
 ___
 
@@ -173,7 +173,7 @@ continue with the execution of a particular item that is in a wait state, typica
 
 #### Defined in
 
-[API/API.ts:224](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/API/API.ts#L224)
+[API/API.ts:224](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/API/API.ts#L224)
 
 ___
 
@@ -204,7 +204,7 @@ Also, updates item data
 
 #### Defined in
 
-[API/API.ts:230](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/API/API.ts#L230)
+[API/API.ts:230](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/API/API.ts#L230)
 
 ___
 
@@ -234,7 +234,7 @@ throw a message with an id, system will identify receiving item
 
 #### Defined in
 
-[API/API.ts:235](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/API/API.ts#L235)
+[API/API.ts:235](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/API/API.ts#L235)
 
 ___
 
@@ -264,7 +264,7 @@ throw a signal with an id, system will identify receiving item(s)
 
 #### Defined in
 
-[API/API.ts:238](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/API/API.ts#L238)
+[API/API.ts:238](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/API/API.ts#L238)
 
 ___
 
@@ -294,7 +294,7 @@ start a second event node (in a subprocess) for a running instance
 
 #### Defined in
 
-[API/API.ts:241](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/API/API.ts#L241)
+[API/API.ts:241](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/API/API.ts#L241)
 
 ___
 
@@ -325,4 +325,4 @@ this add a savePoint for each item, allowing you to select that item to restore 
 
 #### Defined in
 
-[API/API.ts:244](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/API/API.ts#L244)
+[API/API.ts:244](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/API/API.ts#L244)

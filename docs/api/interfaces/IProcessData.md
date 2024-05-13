@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[interfaces/DataObjects.ts:102](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/interfaces/DataObjects.ts#L102)
+[interfaces/DataObjects.ts:102](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/interfaces/DataObjects.ts#L102)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[interfaces/DataObjects.ts:103](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/interfaces/DataObjects.ts#L103)
+[interfaces/DataObjects.ts:103](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/interfaces/DataObjects.ts#L103)
 
 ___
 
@@ -42,4 +42,4 @@ ___
 
 #### Defined in
 
-[interfaces/DataObjects.ts:104](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/interfaces/DataObjects.ts#L104)
+[interfaces/DataObjects.ts:104](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/interfaces/DataObjects.ts#L104)

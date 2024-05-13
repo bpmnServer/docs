@@ -199,8 +199,6 @@ REQUIRE_AUTHENTICATION=true
 ENFORCE_SECURITY=true
 ```
 
-This will utilize `passportjs` for security
-
 ## Handling Access Control
 
 Here is a typical flow of a Process:

@@ -146,7 +146,7 @@ bpmn-server
 
 #### Defined in
 
-[API/SecureUser.ts:230](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/API/SecureUser.ts#L230)
+[API/SecureUser.ts:230](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/API/SecureUser.ts#L230)
 
 ___
 
@@ -156,7 +156,7 @@ ___
 
 #### Defined in
 
-[common/DefaultConfiguration.ts:56](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/common/DefaultConfiguration.ts#L56)
+[common/DefaultConfiguration.ts:56](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/common/DefaultConfiguration.ts#L56)
 
 ___
 
@@ -166,7 +166,7 @@ ___
 
 #### Defined in
 
-[datastore/DataStore.ts:17](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/datastore/DataStore.ts#L17)
+[datastore/DataStore.ts:17](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/datastore/DataStore.ts#L17)
 
 ___
 
@@ -176,7 +176,7 @@ ___
 
 #### Defined in
 
-[datastore/DataStore.ts:18](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/datastore/DataStore.ts#L18)
+[datastore/DataStore.ts:18](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/datastore/DataStore.ts#L18)
 
 ___
 
@@ -186,7 +186,7 @@ ___
 
 #### Defined in
 
-[datastore/DataStore.ts:19](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/datastore/DataStore.ts#L19)
+[datastore/DataStore.ts:19](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/datastore/DataStore.ts#L19)
 
 ___
 
@@ -216,7 +216,7 @@ ___
 
 #### Defined in
 
-[elements/behaviours/BehaviourLoader.ts:16](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/behaviours/BehaviourLoader.ts#L16)
+[elements/behaviours/BehaviourLoader.ts:16](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/elements/behaviours/BehaviourLoader.ts#L16)
 
 ## Functions
 
@@ -236,4 +236,4 @@ ___
 
 #### Defined in
 
-[common/timer.ts:4](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/common/timer.ts#L4)
+[common/timer.ts:4](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/common/timer.ts#L4)

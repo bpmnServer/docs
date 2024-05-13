@@ -35,7 +35,6 @@ theme:
 
 plugins:
   - search
-
 markdown_extensions:
   - toc:
       permalink: "#" 
@@ -45,7 +44,11 @@ markdown_extensions:
   - tables
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.highlight:
       anchor_linenums: true
       anchor_linenums: true
@@ -72,14 +75,7 @@ nav:
   - 'Setup': setup.md 
   - 'Application Integration': customization.md 
   - 'Advanced Topics': advanced.md
-- bpmn-web:
-  - 'install': bpmn-web.md
-  - 'Executing Example': examples/BuyCar-Web.md
-
-- bpmn-client:
-  - 'install': bpmn-client.md
-  - 'Executing Example': examples/BuyCar-Remote.md
-  - 'Client API': client-api.md
+  - 'Frequently Asked Questions': faq.md
 
 - Examples/Features:
   - 'Service Task': examples/serviceTask.md
@@ -106,13 +102,22 @@ nav:
   - 'API Example': examples//BuyCar-Server.md
   - 'API': api/readme.md
 
+- Tutorial:
+  - 'Getting Started': tutorial/start.md
+  - 'Enable Security': tutorial/tutorial-security.md
+  - 'Start a Leave Application': tutorial/tutorial-user1.md
+  - 'Manager to Approve': tutorial/tutorial-manager1.md
+  - 'Let us review': tutorial/tutorial-review.md
+  - 'Execute the exercise from NodeJs': tutorial/tutorial-script.md
 
-# - Tutorial:
-#   - 'Intro to BPMN': bpmn/intro.md
-#   - 'Overview': tutorial.md
-#   - 'Getting Started': tutorial-setup.md
-#   - 'Model': tutorial-model.md
-#   - 'Design': tutorial-design.md
-#   - 'Adding Security': tutorial-security.md
+
+- bpmn-web:
+  - 'install': bpmn-web.md
+  - 'Executing Example': examples/BuyCar-Web.md
+
+- bpmn-client:
+  - 'install': bpmn-client.md
+  - 'Executing Example': examples/BuyCar-Remote.md
+  - 'Client API': client-api.md
 
 not_in_nav: api/

@@ -53,7 +53,7 @@ APIComponent.constructor
 
 #### Defined in
 
-[API/API.ts:44](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/API/API.ts#L44)
+[API/API.ts:44](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/API/API.ts#L44)
 
 ## Properties
 
@@ -67,7 +67,7 @@ APIComponent.api
 
 #### Defined in
 
-[API/API.ts:42](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/API/API.ts#L42)
+[API/API.ts:42](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/API/API.ts#L42)
 
 ## Accessors
 
@@ -85,7 +85,7 @@ APIComponent.server
 
 #### Defined in
 
-[API/API.ts:47](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/API/API.ts#L47)
+[API/API.ts:47](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/API/API.ts#L47)
 
 ## Methods
 
@@ -109,7 +109,7 @@ APIComponent.getUser
 
 #### Defined in
 
-[API/API.ts:50](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/API/API.ts#L50)
+[API/API.ts:50](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/API/API.ts#L50)
 
 ___
 
@@ -130,7 +130,7 @@ ___
 
 #### Defined in
 
-[API/API.ts:251](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/API/API.ts#L251)
+[API/API.ts:251](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/API/API.ts#L251)
 
 ___
 
@@ -151,7 +151,7 @@ ___
 
 #### Defined in
 
-[API/API.ts:259](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/API/API.ts#L259)
+[API/API.ts:259](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/API/API.ts#L259)
 
 ___
 
@@ -172,7 +172,7 @@ ___
 
 #### Defined in
 
-[API/API.ts:264](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/API/API.ts#L264)
+[API/API.ts:264](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/API/API.ts#L264)
 
 ___
 
@@ -194,7 +194,7 @@ ___
 
 #### Defined in
 
-[API/API.ts:270](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/API/API.ts#L270)
+[API/API.ts:270](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/API/API.ts#L270)
 
 ___
 
@@ -215,4 +215,4 @@ ___
 
 #### Defined in
 
-[API/API.ts:275](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/API/API.ts#L275)
+[API/API.ts:275](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/API/API.ts#L275)

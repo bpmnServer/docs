@@ -84,7 +84,7 @@ super class for various objects that are part of the server
 
 #### Defined in
 
-[datastore/DataStore.ts:35](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/datastore/DataStore.ts#L35)
+[datastore/DataStore.ts:35](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/datastore/DataStore.ts#L35)
 
 ## Properties
 
@@ -98,7 +98,7 @@ super class for various objects that are part of the server
 
 #### Defined in
 
-[datastore/DataStore.ts:24](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/datastore/DataStore.ts#L24)
+[datastore/DataStore.ts:24](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/datastore/DataStore.ts#L24)
 
 ___
 
@@ -112,7 +112,7 @@ ___
 
 #### Defined in
 
-[datastore/DataStore.ts:25](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/datastore/DataStore.ts#L25)
+[datastore/DataStore.ts:25](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/datastore/DataStore.ts#L25)
 
 ___
 
@@ -122,7 +122,7 @@ ___
 
 #### Defined in
 
-[datastore/DataStore.ts:27](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/datastore/DataStore.ts#L27)
+[datastore/DataStore.ts:27](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/datastore/DataStore.ts#L27)
 
 ___
 
@@ -132,7 +132,7 @@ ___
 
 #### Defined in
 
-[datastore/DataStore.ts:28](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/datastore/DataStore.ts#L28)
+[datastore/DataStore.ts:28](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/datastore/DataStore.ts#L28)
 
 ___
 
@@ -142,7 +142,7 @@ ___
 
 #### Defined in
 
-[datastore/DataStore.ts:29](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/datastore/DataStore.ts#L29)
+[datastore/DataStore.ts:29](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/datastore/DataStore.ts#L29)
 
 ___
 
@@ -152,7 +152,7 @@ ___
 
 #### Defined in
 
-[datastore/DataStore.ts:30](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/datastore/DataStore.ts#L30)
+[datastore/DataStore.ts:30](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/datastore/DataStore.ts#L30)
 
 ___
 
@@ -162,7 +162,7 @@ ___
 
 #### Defined in
 
-[datastore/DataStore.ts:31](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/datastore/DataStore.ts#L31)
+[datastore/DataStore.ts:31](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/datastore/DataStore.ts#L31)
 
 ___
 
@@ -176,7 +176,7 @@ ___
 
 #### Defined in
 
-[datastore/DataStore.ts:32](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/datastore/DataStore.ts#L32)
+[datastore/DataStore.ts:32](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/datastore/DataStore.ts#L32)
 
 ___
 
@@ -186,7 +186,7 @@ ___
 
 #### Defined in
 
-[datastore/DataStore.ts:33](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/datastore/DataStore.ts#L33)
+[datastore/DataStore.ts:33](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/datastore/DataStore.ts#L33)
 
 ___
 
@@ -196,7 +196,7 @@ ___
 
 #### Defined in
 
-[datastore/DataStore.ts:97](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/datastore/DataStore.ts#L97)
+[datastore/DataStore.ts:99](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/datastore/DataStore.ts#L99)
 
 ___
 
@@ -210,7 +210,7 @@ ___
 
 #### Defined in
 
-[server/ServerComponent.ts:9](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/server/ServerComponent.ts#L9)
+[server/ServerComponent.ts:9](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/server/ServerComponent.ts#L9)
 
 ## Accessors
 
@@ -228,7 +228,7 @@ ServerComponent.configuration
 
 #### Defined in
 
-[server/ServerComponent.ts:14](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/server/ServerComponent.ts#L14)
+[server/ServerComponent.ts:14](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/server/ServerComponent.ts#L14)
 
 ___
 
@@ -250,7 +250,7 @@ ServerComponent.logger
 
 #### Defined in
 
-[server/ServerComponent.ts:15](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/server/ServerComponent.ts#L15)
+[server/ServerComponent.ts:15](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/server/ServerComponent.ts#L15)
 
 ___
 
@@ -268,7 +268,7 @@ ServerComponent.cron
 
 #### Defined in
 
-[server/ServerComponent.ts:16](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/server/ServerComponent.ts#L16)
+[server/ServerComponent.ts:16](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/server/ServerComponent.ts#L16)
 
 ___
 
@@ -286,7 +286,7 @@ ServerComponent.cache
 
 #### Defined in
 
-[server/ServerComponent.ts:17](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/server/ServerComponent.ts#L17)
+[server/ServerComponent.ts:17](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/server/ServerComponent.ts#L17)
 
 ___
 
@@ -304,7 +304,7 @@ ServerComponent.appDelegate
 
 #### Defined in
 
-[server/ServerComponent.ts:18](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/server/ServerComponent.ts#L18)
+[server/ServerComponent.ts:18](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/server/ServerComponent.ts#L18)
 
 ___
 
@@ -322,7 +322,7 @@ ServerComponent.engine
 
 #### Defined in
 
-[server/ServerComponent.ts:19](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/server/ServerComponent.ts#L19)
+[server/ServerComponent.ts:19](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/server/ServerComponent.ts#L19)
 
 ___
 
@@ -340,7 +340,7 @@ ServerComponent.dataStore
 
 #### Defined in
 
-[server/ServerComponent.ts:20](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/server/ServerComponent.ts#L20)
+[server/ServerComponent.ts:20](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/server/ServerComponent.ts#L20)
 
 ___
 
@@ -358,7 +358,7 @@ ServerComponent.definitions
 
 #### Defined in
 
-[server/ServerComponent.ts:21](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/server/ServerComponent.ts#L21)
+[server/ServerComponent.ts:21](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/server/ServerComponent.ts#L21)
 
 ___
 
@@ -376,7 +376,7 @@ ServerComponent.listener
 
 #### Defined in
 
-[server/ServerComponent.ts:22](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/server/ServerComponent.ts#L22)
+[server/ServerComponent.ts:22](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/server/ServerComponent.ts#L22)
 
 ## Methods
 
@@ -401,7 +401,7 @@ ServerComponent.listener
 
 #### Defined in
 
-[datastore/DataStore.ts:48](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/datastore/DataStore.ts#L48)
+[datastore/DataStore.ts:48](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/datastore/DataStore.ts#L48)
 
 ___
 
@@ -426,7 +426,7 @@ ___
 
 #### Defined in
 
-[datastore/DataStore.ts:51](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/datastore/DataStore.ts#L51)
+[datastore/DataStore.ts:51](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/datastore/DataStore.ts#L51)
 
 ___
 
@@ -448,7 +448,7 @@ ___
 
 #### Defined in
 
-[datastore/DataStore.ts:69](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/datastore/DataStore.ts#L69)
+[datastore/DataStore.ts:69](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/datastore/DataStore.ts#L69)
 
 ___
 
@@ -469,7 +469,7 @@ ___
 
 #### Defined in
 
-[datastore/DataStore.ts:98](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/datastore/DataStore.ts#L98)
+[datastore/DataStore.ts:100](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/datastore/DataStore.ts#L100)
 
 ___
 
@@ -493,7 +493,7 @@ ___
 
 #### Defined in
 
-[datastore/DataStore.ts:147](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/datastore/DataStore.ts#L147)
+[datastore/DataStore.ts:149](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/datastore/DataStore.ts#L149)
 
 ___
 
@@ -518,7 +518,7 @@ ___
 
 #### Defined in
 
-[datastore/DataStore.ts:157](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/datastore/DataStore.ts#L157)
+[datastore/DataStore.ts:159](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/datastore/DataStore.ts#L159)
 
 ___
 
@@ -539,7 +539,7 @@ ___
 
 #### Defined in
 
-[datastore/DataStore.ts:178](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/datastore/DataStore.ts#L178)
+[datastore/DataStore.ts:180](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/datastore/DataStore.ts#L180)
 
 ___
 
@@ -560,7 +560,7 @@ ___
 
 #### Defined in
 
-[datastore/DataStore.ts:182](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/datastore/DataStore.ts#L182)
+[datastore/DataStore.ts:184](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/datastore/DataStore.ts#L184)
 
 ___
 
@@ -585,7 +585,7 @@ ___
 
 #### Defined in
 
-[datastore/DataStore.ts:193](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/datastore/DataStore.ts#L193)
+[datastore/DataStore.ts:195](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/datastore/DataStore.ts#L195)
 
 ___
 
@@ -632,7 +632,7 @@ Problem with Mongodb:	`projection $elematch returns only the first record`
 
 #### Defined in
 
-[datastore/DataStore.ts:231](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/datastore/DataStore.ts#L231)
+[datastore/DataStore.ts:235](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/datastore/DataStore.ts#L235)
 
 ___
 
@@ -656,7 +656,7 @@ ___
 
 #### Defined in
 
-[datastore/DataStore.ts:244](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/datastore/DataStore.ts#L244)
+[datastore/DataStore.ts:248](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/datastore/DataStore.ts#L248)
 
 ___
 
@@ -678,7 +678,7 @@ creates a new collection and add an index
 
 #### Defined in
 
-[datastore/DataStore.ts:258](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/datastore/DataStore.ts#L258)
+[datastore/DataStore.ts:262](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/datastore/DataStore.ts#L262)
 
 ___
 
@@ -702,4 +702,4 @@ ___
 
 #### Defined in
 
-[datastore/DataStore.ts:264](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/datastore/DataStore.ts#L264)
+[datastore/DataStore.ts:268](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/datastore/DataStore.ts#L268)

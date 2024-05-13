@@ -50,7 +50,7 @@
 
 #### Defined in
 
-[elements/Process.ts:23](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Process.ts#L23)
+[elements/Process.ts:23](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/elements/Process.ts#L23)
 
 ## Properties
 
@@ -60,7 +60,7 @@
 
 #### Defined in
 
-[elements/Process.ts:13](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Process.ts#L13)
+[elements/Process.ts:13](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/elements/Process.ts#L13)
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 #### Defined in
 
-[elements/Process.ts:14](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Process.ts#L14)
+[elements/Process.ts:14](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/elements/Process.ts#L14)
 
 ___
 
@@ -80,7 +80,7 @@ ___
 
 #### Defined in
 
-[elements/Process.ts:15](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Process.ts#L15)
+[elements/Process.ts:15](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/elements/Process.ts#L15)
 
 ___
 
@@ -90,7 +90,7 @@ ___
 
 #### Defined in
 
-[elements/Process.ts:16](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Process.ts#L16)
+[elements/Process.ts:16](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/elements/Process.ts#L16)
 
 ___
 
@@ -100,7 +100,7 @@ ___
 
 #### Defined in
 
-[elements/Process.ts:17](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Process.ts#L17)
+[elements/Process.ts:17](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/elements/Process.ts#L17)
 
 ___
 
@@ -110,7 +110,7 @@ ___
 
 #### Defined in
 
-[elements/Process.ts:18](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Process.ts#L18)
+[elements/Process.ts:18](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/elements/Process.ts#L18)
 
 ___
 
@@ -120,7 +120,7 @@ ___
 
 #### Defined in
 
-[elements/Process.ts:19](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Process.ts#L19)
+[elements/Process.ts:19](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/elements/Process.ts#L19)
 
 ___
 
@@ -130,7 +130,7 @@ ___
 
 #### Defined in
 
-[elements/Process.ts:20](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Process.ts#L20)
+[elements/Process.ts:20](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/elements/Process.ts#L20)
 
 ___
 
@@ -140,7 +140,7 @@ ___
 
 #### Defined in
 
-[elements/Process.ts:21](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Process.ts#L21)
+[elements/Process.ts:21](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/elements/Process.ts#L21)
 
 ## Methods
 
@@ -161,7 +161,7 @@ ___
 
 #### Defined in
 
-[elements/Process.ts:30](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Process.ts#L30)
+[elements/Process.ts:30](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/elements/Process.ts#L30)
 
 ___
 
@@ -184,7 +184,7 @@ Notify process that it started
 
 #### Defined in
 
-[elements/Process.ts:37](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Process.ts#L37)
+[elements/Process.ts:37](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/elements/Process.ts#L37)
 
 ___
 
@@ -206,7 +206,7 @@ Notify process that it ended
 
 #### Defined in
 
-[elements/Process.ts:60](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Process.ts#L60)
+[elements/Process.ts:60](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/elements/Process.ts#L60)
 
 ___
 
@@ -226,7 +226,7 @@ ___
 
 #### Defined in
 
-[elements/Process.ts:81](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Process.ts#L81)
+[elements/Process.ts:81](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/elements/Process.ts#L81)
 
 ___
 
@@ -246,7 +246,7 @@ ___
 
 #### Defined in
 
-[elements/Process.ts:84](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Process.ts#L84)
+[elements/Process.ts:84](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/elements/Process.ts#L84)
 
 ___
 
@@ -260,13 +260,13 @@ ___
 
 #### Defined in
 
-[elements/Process.ts:101](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Process.ts#L101)
+[elements/Process.ts:101](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/elements/Process.ts#L101)
 
 ___
 
 ### doEvent
 
-▸ **doEvent**(`execution`, `event`): `Promise`\<`void`\>
+▸ **doEvent**(`execution`, `event`, `eventDetails?`): `Promise`\<`void`\>
 
 #### Parameters
 
@@ -274,6 +274,7 @@ ___
 | :------ | :------ |
 | `execution` | `any` |
 | `event` | `any` |
+| `eventDetails` | `Object` |
 
 #### Returns
 
@@ -281,7 +282,7 @@ ___
 
 #### Defined in
 
-[elements/Process.ts:114](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Process.ts#L114)
+[elements/Process.ts:114](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/elements/Process.ts#L114)
 
 ___
 
@@ -295,4 +296,4 @@ ___
 
 #### Defined in
 
-[elements/Process.ts:125](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/Process.ts#L125)
+[elements/Process.ts:126](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/elements/Process.ts#L126)

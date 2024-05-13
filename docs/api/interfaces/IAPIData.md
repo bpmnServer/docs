@@ -39,7 +39,7 @@ api.data.getPendingUserTasks({"item.assignee":user.userName});
 
 #### Defined in
 
-[API/API.ts:144](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/API/API.ts#L144)
+[API/API.ts:144](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/API/API.ts#L144)
 
 ___
 
@@ -62,7 +62,7 @@ returns list of `item`s
 
 #### Defined in
 
-[API/API.ts:148](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/API/API.ts#L148)
+[API/API.ts:148](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/API/API.ts#L148)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[API/API.ts:149](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/API/API.ts#L149)
+[API/API.ts:149](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/API/API.ts#L149)
 
 ___
 
@@ -107,7 +107,7 @@ returns list of `instance`s
 
 #### Defined in
 
-[API/API.ts:153](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/API/API.ts#L153)
+[API/API.ts:153](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/API/API.ts#L153)
 
 ___
 
@@ -130,4 +130,4 @@ deletes the `instance`s
 
 #### Defined in
 
-[API/API.ts:157](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/API/API.ts#L157)
+[API/API.ts:157](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/API/API.ts#L157)

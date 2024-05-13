@@ -3,7 +3,6 @@
 /obj
 /site
 *.log
-*.cmd
 *.sln
 *.njsproj
 *.njsproj.user

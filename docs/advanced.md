@@ -1,4 +1,5 @@
-# command line interface
+# Advanced Topics
+## command line interface
 
 ```sh
 >npm run cli
@@ -27,7 +28,7 @@ Enter Command, q to quit, or ? to list commands
 >
 ```
 
-# Instance Locking
+## Instance Locking
 
 Instance Locking is provided to ensure concurrencies supporting multiple nodeJS servers running against same MongoDB.
 This is also useful, when having one server, since there is a potential of multiple requests can be running against the same instance.
@@ -37,6 +38,25 @@ The intent is to ensure that only one process/executing is running against the i
 This is acomplished through `wf-locks` MongoDB collection.
 
 When a server encounter failure, running instances may remain locked, this scenario can be repaired through `cli` command as above
+
+## Scalability Feature
+
+Scalability feature works out the box, no additional action on your part.
+
+- define servers pointing to same MongoDB
+- set SERVER_ID to unique values for each server
+- Only one server should have CRON (timers on), others should be:
+
+```
+const server = new BPMNServer(configuration, logger,{cron:false});
+
+```
+## Concurrency Implementation
+- Workflow instances are database bound; retrieved and saved all the time
+- Before retrieving the instance, a lock is issued against it in collection `wf-locks`
+- After execution of an instance is complete and data is saved, lock is released.
+- This to ensure only one operation can be performed against the workflow at any time, other operations will have to wait for the lock to be released.
+- The scope of the lock is the workflow instance only, other instances of same model or different models can still be executed
 
 # Hung Tasks
 
@@ -54,7 +74,7 @@ When running long running tasks and a system failure occures, bpmn-server saves 
 2.  days to clean archive:  ex: 120 - all instances completed more than 120 days will erased from archive
 
 ```sh
-PS C:\bp\dev\bpmn-web> node dist/scripts/archive 30 120
+PS C:/bp/dev/bpmn-web> node dist/scripts/archive 30 120
 ```
 ```text
 BPMNServer from  C:\bp\dev\bpmn-server\dist\server\BPMNServer.js

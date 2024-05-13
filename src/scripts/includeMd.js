@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path=require('path');
 const readline = require('readline');
 
 
@@ -10,25 +11,30 @@ const {
     Glob,
   } = require('glob')
 
-
-
-var myArgs = process.argv.slice(2);
-console.log('includeMd.js: ', myArgs);
-
-if (myArgs.length<2) {
-	console.log("Syntax inputFile outputFile");
-	return;
+function sample() {
+    var myArgs = process.argv.slice(2);
+    console.log('includeMd.js: ', myArgs);
+    
+    if (myArgs.length<2) {
+        console.log("Syntax inputFile outputFile");
+        return;
+    }
+    
+    const inputFile =myArgs[0];
+    const outputFile =myArgs[1];
+    console.log('converting' ,inputFile,outputFile)
+    let count=processFile(inputFile,outputFile);
+    
 }
 
-const inputFile =myArgs[0];
-const outputFile =myArgs[1];
-
-let count=processFile(inputFile,outputFile);
-const mdfiles =  globSync('docs/**/*.md', { ignore: 'docs/api/**' })
+console.log('scanning folders..');
+const mdfiles =  globSync('./**/*.include.md', { ignore: './api/**' })
 
 console.profile();
 mdfiles.forEach(file=>{
-//        console.log('processing file:',file,processFile(file,outputFile));
+    let output=file.replace('.include','');
+    console.log('from:',file,'to:',output);
+    console.log('processing file:',file,processFile(file,output));
 });
 
 console.profileEnd();
@@ -36,7 +42,7 @@ console.profileEnd();
 
 //console.log('generating '+inputFile +' into '+outputFile, count);
 
-function processFile(input,output){
+function processFile(input,outputFile){
     const lines=[];
     let mode='copy'; // ignore
     let includeFile;
@@ -45,7 +51,6 @@ function processFile(input,output){
     var ilines = fs.readFileSync(input, 'utf-8').split('\n');
 
     ilines.forEach(line=> {
-        
       
         if (line.startsWith('///'))
             line=line.substring(3);
@@ -115,17 +120,16 @@ function getInclude(fileReference) {
     lines.forEach(line=>{
         
         if (mode=='ignore') {
-
-            if (line.startsWith('## '+sect)) {
-                endMarker='##';
+            if (matchSectionHead(line,'## ',sect)) {
+                endMarker='## ';
                 mode='copy';
             }
-            else if (line.startsWith('### '+sect)) {
-                endMarker='###';
+            else if (matchSectionHead(line,'### ',sect)) {
+                endMarker='### ';
                 mode='copy';
             }
-            else if (line.startsWith('#### '+sect)) {
-                endMarker='####';
+            else if (matchSectionHead(line,'#### ',sect)) {
+                endMarker='#### ';
                 mode='copy';
             }
         }
@@ -138,5 +142,15 @@ function getInclude(fileReference) {
 
     console.log(rlines);
     return rlines;
+}
 
-}    
+function matchSectionHead(line,pre,target) {
+
+    if (line.startsWith(pre)) {
+        let section=line.substring(pre.length);
+        section=section.replaceAll(' ','-').toLowerCase();
+        return section.startsWith(target);
+    }
+    return false;
+
+}

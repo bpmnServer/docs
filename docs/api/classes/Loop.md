@@ -29,6 +29,7 @@
 - [isDone](Loop.md#isdone)
 - [getNext](Loop.md#getnext)
 - [checkStart](Loop.md#checkstart)
+- [cancel](Loop.md#cancel)
 - [checkNext](Loop.md#checknext)
 
 ## Constructors
@@ -51,7 +52,7 @@
 
 #### Defined in
 
-[engine/Loop.ts:20](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/engine/Loop.ts#L20)
+[engine/Loop.ts:20](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/engine/Loop.ts#L20)
 
 ## Properties
 
@@ -61,7 +62,7 @@
 
 #### Defined in
 
-[engine/Loop.ts:9](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/engine/Loop.ts#L9)
+[engine/Loop.ts:9](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/engine/Loop.ts#L9)
 
 ___
 
@@ -71,7 +72,7 @@ ___
 
 #### Defined in
 
-[engine/Loop.ts:10](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/engine/Loop.ts#L10)
+[engine/Loop.ts:10](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/engine/Loop.ts#L10)
 
 ___
 
@@ -81,7 +82,7 @@ ___
 
 #### Defined in
 
-[engine/Loop.ts:11](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/engine/Loop.ts#L11)
+[engine/Loop.ts:11](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/engine/Loop.ts#L11)
 
 ___
 
@@ -91,7 +92,7 @@ ___
 
 #### Defined in
 
-[engine/Loop.ts:12](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/engine/Loop.ts#L12)
+[engine/Loop.ts:12](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/engine/Loop.ts#L12)
 
 ___
 
@@ -101,7 +102,7 @@ ___
 
 #### Defined in
 
-[engine/Loop.ts:13](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/engine/Loop.ts#L13)
+[engine/Loop.ts:13](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/engine/Loop.ts#L13)
 
 ___
 
@@ -111,7 +112,7 @@ ___
 
 #### Defined in
 
-[engine/Loop.ts:14](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/engine/Loop.ts#L14)
+[engine/Loop.ts:14](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/engine/Loop.ts#L14)
 
 ___
 
@@ -121,7 +122,7 @@ ___
 
 #### Defined in
 
-[engine/Loop.ts:15](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/engine/Loop.ts#L15)
+[engine/Loop.ts:15](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/engine/Loop.ts#L15)
 
 ___
 
@@ -131,7 +132,7 @@ ___
 
 #### Defined in
 
-[engine/Loop.ts:16](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/engine/Loop.ts#L16)
+[engine/Loop.ts:16](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/engine/Loop.ts#L16)
 
 ## Methods
 
@@ -145,7 +146,7 @@ ___
 
 #### Defined in
 
-[engine/Loop.ts:17](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/engine/Loop.ts#L17)
+[engine/Loop.ts:17](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/engine/Loop.ts#L17)
 
 ___
 
@@ -159,7 +160,7 @@ ___
 
 #### Defined in
 
-[engine/Loop.ts:18](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/engine/Loop.ts#L18)
+[engine/Loop.ts:18](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/engine/Loop.ts#L18)
 
 ___
 
@@ -183,7 +184,7 @@ ___
 
 #### Defined in
 
-[engine/Loop.ts:51](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/engine/Loop.ts#L51)
+[engine/Loop.ts:51](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/engine/Loop.ts#L51)
 
 ___
 
@@ -204,7 +205,7 @@ ___
 
 #### Defined in
 
-[engine/Loop.ts:58](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/engine/Loop.ts#L58)
+[engine/Loop.ts:58](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/engine/Loop.ts#L58)
 
 ___
 
@@ -218,7 +219,7 @@ ___
 
 #### Defined in
 
-[engine/Loop.ts:69](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/engine/Loop.ts#L69)
+[engine/Loop.ts:69](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/engine/Loop.ts#L69)
 
 ___
 
@@ -232,7 +233,7 @@ ___
 
 #### Defined in
 
-[engine/Loop.ts:72](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/engine/Loop.ts#L72)
+[engine/Loop.ts:72](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/engine/Loop.ts#L72)
 
 ___
 
@@ -246,7 +247,7 @@ ___
 
 #### Defined in
 
-[engine/Loop.ts:75](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/engine/Loop.ts#L75)
+[engine/Loop.ts:75](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/engine/Loop.ts#L75)
 
 ___
 
@@ -266,7 +267,27 @@ ___
 
 #### Defined in
 
-[engine/Loop.ts:81](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/engine/Loop.ts#L81)
+[engine/Loop.ts:81](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/engine/Loop.ts#L81)
+
+___
+
+### cancel
+
+▸ **cancel**(`fromItem`): `Promise`\<`void`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `fromItem` | `any` |
+
+#### Returns
+
+`Promise`\<`void`\>
+
+#### Defined in
+
+[engine/Loop.ts:163](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/engine/Loop.ts#L163)
 
 ___
 
@@ -286,4 +307,4 @@ ___
 
 #### Defined in
 
-[engine/Loop.ts:163](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/engine/Loop.ts#L163)
+[engine/Loop.ts:185](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/engine/Loop.ts#L185)

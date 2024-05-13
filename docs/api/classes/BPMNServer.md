@@ -45,6 +45,7 @@ The main class of Server Layer
 
 ### Methods
 
+- [status](BPMNServer.md#status)
 - [getVersion](BPMNServer.md#getversion)
 - [getInstance](BPMNServer.md#getinstance)
 
@@ -70,7 +71,7 @@ Server Constructor
 
 #### Defined in
 
-[server/BPMNServer.ts:64](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/server/BPMNServer.ts#L64)
+[server/BPMNServer.ts:64](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/server/BPMNServer.ts#L64)
 
 ## Properties
 
@@ -84,7 +85,7 @@ Server Constructor
 
 #### Defined in
 
-[server/BPMNServer.ts:44](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/server/BPMNServer.ts#L44)
+[server/BPMNServer.ts:44](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/server/BPMNServer.ts#L44)
 
 ___
 
@@ -98,7 +99,7 @@ ___
 
 #### Defined in
 
-[server/BPMNServer.ts:45](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/server/BPMNServer.ts#L45)
+[server/BPMNServer.ts:45](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/server/BPMNServer.ts#L45)
 
 ___
 
@@ -112,7 +113,7 @@ ___
 
 #### Defined in
 
-[server/BPMNServer.ts:46](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/server/BPMNServer.ts#L46)
+[server/BPMNServer.ts:46](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/server/BPMNServer.ts#L46)
 
 ___
 
@@ -126,7 +127,7 @@ ___
 
 #### Defined in
 
-[server/BPMNServer.ts:47](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/server/BPMNServer.ts#L47)
+[server/BPMNServer.ts:47](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/server/BPMNServer.ts#L47)
 
 ___
 
@@ -140,7 +141,7 @@ ___
 
 #### Defined in
 
-[server/BPMNServer.ts:48](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/server/BPMNServer.ts#L48)
+[server/BPMNServer.ts:48](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/server/BPMNServer.ts#L48)
 
 ___
 
@@ -154,7 +155,7 @@ ___
 
 #### Defined in
 
-[server/BPMNServer.ts:49](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/server/BPMNServer.ts#L49)
+[server/BPMNServer.ts:49](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/server/BPMNServer.ts#L49)
 
 ___
 
@@ -168,7 +169,7 @@ ___
 
 #### Defined in
 
-[server/BPMNServer.ts:50](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/server/BPMNServer.ts#L50)
+[server/BPMNServer.ts:50](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/server/BPMNServer.ts#L50)
 
 ___
 
@@ -182,7 +183,7 @@ ___
 
 #### Defined in
 
-[server/BPMNServer.ts:51](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/server/BPMNServer.ts#L51)
+[server/BPMNServer.ts:51](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/server/BPMNServer.ts#L51)
 
 ___
 
@@ -196,7 +197,7 @@ ___
 
 #### Defined in
 
-[server/BPMNServer.ts:52](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/server/BPMNServer.ts#L52)
+[server/BPMNServer.ts:52](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/server/BPMNServer.ts#L52)
 
 ___
 
@@ -206,7 +207,7 @@ ___
 
 #### Defined in
 
-[server/BPMNServer.ts:53](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/server/BPMNServer.ts#L53)
+[server/BPMNServer.ts:53](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/server/BPMNServer.ts#L53)
 
 ___
 
@@ -216,7 +217,7 @@ ___
 
 #### Defined in
 
-[server/BPMNServer.ts:55](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/server/BPMNServer.ts#L55)
+[server/BPMNServer.ts:55](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/server/BPMNServer.ts#L55)
 
 ## Accessors
 
@@ -230,9 +231,31 @@ ___
 
 #### Defined in
 
-[server/BPMNServer.ts:109](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/server/BPMNServer.ts#L109)
+[server/BPMNServer.ts:117](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/server/BPMNServer.ts#L117)
 
 ## Methods
+
+### status
+
+▸ **status**(): `Object`
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `version` | `any` |
+| `cache` | () => `any` |
+| `engineRunning` | `number` |
+| `engineCalls` | `number` |
+| `memoryUsage` | `any` |
+
+#### Defined in
+
+[server/BPMNServer.ts:93](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/server/BPMNServer.ts#L93)
+
+___
 
 ### getVersion
 
@@ -244,7 +267,7 @@ ___
 
 #### Defined in
 
-[server/BPMNServer.ts:94](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/server/BPMNServer.ts#L94)
+[server/BPMNServer.ts:102](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/server/BPMNServer.ts#L102)
 
 ___
 
@@ -258,4 +281,4 @@ ___
 
 #### Defined in
 
-[server/BPMNServer.ts:112](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/server/BPMNServer.ts#L112)
+[server/BPMNServer.ts:120](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/server/BPMNServer.ts#L120)

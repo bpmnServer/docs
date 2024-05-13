@@ -106,28 +106,29 @@ We Provide a full demo @ https://bpmn.omniworkflow.com
 This package requires Node.js and an access to MongoDB ()
 if you don't have MongoDB already installed you can [create a free cloud account here](http://bit.ly/cyd-atlas) or can be [installed locally](https://www.mongodb.com/docs/manual/installation/)
 
-- git clone
+- 1 git clone
 ```sh
  git clone https://github.com/bpmnServer/bpmn-web.git
  cd bpmn-web
 ```
-- install packages
+- 2 install packages
 ```sh
  npm install
 ```
-- setup the app
+- 3 setup the app
 ```sh
  npm run setup
 ```
- 
-- Edit .env file to have MongoDB point to your server or free cloud account
+- 4 Edit .env file to have MongoDB point to your server or free cloud account
 
 ```sh
 # MongoDB Settings
 MONGO_DB_URL=mongodb://0.0.0.0:27017/bpmn
 #
 ```
-- Run Setup again to create db objects
+
+- 5 Run Setup again to create db objects
+
 
 ```sh
 npm run setup
@@ -135,7 +136,7 @@ npm run setup
 
 Your installation is now complete.
 
-- Start server
+### Starting the server
 
 ```sh
  npm run start
@@ -154,6 +155,42 @@ App is running at http://localhost:3000 in development mode
 
 Use your browser to view the bpmn-server running
 
+### Command Line Interface
+<details>
+<summary>
+bpmnServer provide some basic functionalities using CLI
+
+</summary>
+
+```sh
+npm run cli
+```
+```{ .text .no-copy }
+
+server started..
+Commands:
+        q       to quit
+        s       start process
+        lo      list outstanding items
+        li      list items
+        l       list instances for a process
+        di      display Instance information
+        i       Invoke Task
+        sgl     Signal Task
+        msg     Message Task
+        d       delete instnaces
+        lm      List of Models
+        lme     List of Models
+        ck      Check locked instnaces
+        re      Recover hung processes
+        lu      List Users
+        spw     Set User Password
+        ?       repeat this list
+Enter Command, q to quit, or ? to list commands
+>
+```
+
+</details>
 ### Docker installation
 
 <details>
@@ -210,42 +247,6 @@ volumes:
 </details>
 
 
-### Command Line Interface
-<details>
-<summary>
-bpmnServer provide some basic functionalities using CLI
-
-</summary>
-
-```sh
-npm run cli
-```
-```{ .text .no-copy }
-
-server started..
-Commands:
-        q       to quit
-        s       start process
-        lo      list outstanding items
-        li      list items
-        l       list instances for a process
-        di      display Instance information
-        i       Invoke Task
-        sgl     Signal Task
-        msg     Message Task
-        d       delete instnaces
-        lm      List of Models
-        lme     List of Models
-        ck      Check locked instnaces
-        re      Recover hung processes
-        lu      List Users
-        spw     Set User Password
-        ?       repeat this list
-Enter Command, q to quit, or ? to list commands
->
-```
-
-</details>
 ### Remote Client Install
 
 [This is a light-weight package to allow remote access to bpmn-server](./bpmn-client.md)

@@ -22,6 +22,18 @@ To Create a new Development Enviroment:
     for docs
         mkdocs gh-deploy
 
+
+New Status:
+----------
+
+Action: start/invoke etc.
+Internal Action:
+    -   execute a node completed from wait
+    -   gotoNext Node
+    -   goto wait state
+    -   end parent node (like as subprocess)
+    -   cancel /terminate node (like boundary)
+
 New Debugger
 ------------
 server.engine.debug(queryForItem,scriptToRun)

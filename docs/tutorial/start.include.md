@@ -9,4 +9,16 @@ Without any installation, let us go to bpmnServer [Demo Website](https://bpmn.om
 3. Fill the form with requested input
 4. You will see now the new `instance` of the model been created along with the data and items
 
+# Installation
+
+<!--include "index.md/#local-install" -->
+<!--include -->
+
+# Enable Security
+## Modify .env
+
+# Using Demo Web App
+## Login
+## Select 'Leave Application
+##
 

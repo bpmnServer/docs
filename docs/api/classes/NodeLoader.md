@@ -41,4 +41,4 @@
 
 #### Defined in
 
-[elements/NodeLoader.ts:13](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/elements/NodeLoader.ts#L13)
+[elements/NodeLoader.ts:13](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/elements/NodeLoader.ts#L13)

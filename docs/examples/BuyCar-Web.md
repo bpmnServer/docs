@@ -1,7 +1,7 @@
 
 # Buy Used Car Example using the Web App:
 
-## 1 Select Process - Execute
+## 1. Select Process - Execute
 From the WebApp home page:
 - Select the Process
 - Click [Execute] link
@@ -9,13 +9,17 @@ From the WebApp home page:
 
 - will start the process and redirect you to an Instance Details page
 
-## 2 Invoke 'Buy' Task
+<hr />
+
+## 2. Invoke 'Buy' Task
 
 ![Image description](BuyCar-web2.png)
 - The process has started and waiting at the task 'Buy'
 - So, let us go for it
 
-## 3 Prompt for Input
+<hr />
+
+## 3. Prompt for Input
 
 ![Image description](BuyCar-web3.png)
 
@@ -29,8 +33,9 @@ To be sure, let us click on the node on the diagram to get more details:
 
 A popup window will show us various details about the node from the BPMN defintion.
 
+<hr />
 
-## 4 Let us 'Drive'
+## 4. Let us 'Drive'
 
 ![Image description](BuyCar-web4.png)
 
@@ -40,7 +45,9 @@ We are now ready to drive and enjoy!
 
 ![Image description](BuyCar-web5.png)
 
-## 5 Congrats!
+<hr />
+
+## 5. Congrats!
 The process is now Complete.
 
 We also have a complete audit of what happened and why!

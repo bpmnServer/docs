@@ -46,7 +46,7 @@
 
 #### Defined in
 
-[engine/DataHandler.ts:7](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/engine/DataHandler.ts#L7)
+[engine/DataHandler.ts:7](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/engine/DataHandler.ts#L7)
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 #### Defined in
 
-[engine/DataHandler.ts:43](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/engine/DataHandler.ts#L43)
+[engine/DataHandler.ts:43](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/engine/DataHandler.ts#L43)
 
 ___
 
@@ -89,4 +89,4 @@ ___
 
 #### Defined in
 
-[engine/DataHandler.ts:56](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/engine/DataHandler.ts#L56)
+[engine/DataHandler.ts:56](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/engine/DataHandler.ts#L56)

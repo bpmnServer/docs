@@ -35,7 +35,7 @@ containing the instance and the results of the call
 
 #### Defined in
 
-[API/API.ts:74](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/API/API.ts#L74)
+[API/API.ts:74](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/API/API.ts#L74)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-[API/API.ts:75](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/API/API.ts#L75)
+[API/API.ts:75](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/API/API.ts#L75)
 
 ___
 
@@ -55,4 +55,4 @@ ___
 
 #### Defined in
 
-[API/API.ts:76](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/API/API.ts#L76)
+[API/API.ts:76](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/API/API.ts#L76)

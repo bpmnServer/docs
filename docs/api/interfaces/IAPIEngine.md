@@ -41,7 +41,7 @@ start a new Instance of specified model
 
 #### Defined in
 
-[API/API.ts:89](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/API/API.ts#L89)
+[API/API.ts:89](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/API/API.ts#L89)
 
 ___
 
@@ -66,7 +66,7 @@ continue with the execution of a particular item that is in a wait state, typica
 
 #### Defined in
 
-[API/API.ts:96](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/API/API.ts#L96)
+[API/API.ts:96](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/API/API.ts#L96)
 
 ___
 
@@ -93,7 +93,7 @@ Also, updates item data
 
 #### Defined in
 
-[API/API.ts:101](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/API/API.ts#L101)
+[API/API.ts:101](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/API/API.ts#L101)
 
 ___
 
@@ -119,7 +119,7 @@ throw a message with an id, system will identify receiving item
 
 #### Defined in
 
-[API/API.ts:105](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/API/API.ts#L105)
+[API/API.ts:105](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/API/API.ts#L105)
 
 ___
 
@@ -145,7 +145,7 @@ throw a signal with an id, system will identify receiving item(s)
 
 #### Defined in
 
-[API/API.ts:109](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/API/API.ts#L109)
+[API/API.ts:109](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/API/API.ts#L109)
 
 ___
 
@@ -171,7 +171,7 @@ start a second event node (in a subprocess) for a running instance
 
 #### Defined in
 
-[API/API.ts:113](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/API/API.ts#L113)
+[API/API.ts:113](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/API/API.ts#L113)
 
 ___
 
@@ -198,4 +198,4 @@ this add a savePoint for each item, allowing you to select that item to restore 
 
 #### Defined in
 
-[API/API.ts:127](https://github.com/bpmnServer/bpmn-server/blob/40582af/src/API/API.ts#L127)
+[API/API.ts:127](https://github.com/bpmnServer/bpmn-server/blob/67a073b/src/API/API.ts#L127)
