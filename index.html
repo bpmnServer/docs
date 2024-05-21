@@ -480,7 +480,16 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Execution">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datastore" class="md-nav__link">
+    <span class="md-ellipsis">
+      Datastore
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Datastore">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -503,15 +512,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#datastore" class="md-nav__link">
-    <span class="md-ellipsis">
-      Datastore
-    </span>
-  </a>
   
 </li>
       
@@ -1778,13 +1778,17 @@ to make them ideal platform to do long running business processes, durable servi
 <p><code>bpmn</code> models can also be imported from other tools.</p>
 <p>Typically your application has multiple bpmn models, a model is represented in a bpmn definition (xml).</p>
 <p>Each Model is made of various elements, an <code>element</code> can be a <code>node</code> in the diagram (events/tasks/gateway) or a  <code>flow</code></p>
-<p>Models are saved by <code>bpmn-server</code> and can be queried <a href="api/interfaces/IAPIModel/">see API.model</a></p>
+<p>Models are saved by <code>bpmn-server</code> into MongoDB and can be queried <a href="api/interfaces/IAPIModel/">see API.model</a></p>
 <p><code>bpmn-server</code> support all bpmn 2.0 elements <a href="examples/">see Modeling Support</a></p>
 <h2 id="execution">Execution<a class="headerlink" href="#execution" title="Permanent link">#</a></h2>
 <p><code>bpmn-server</code> is primiraly an execution engine for bpmn models.</p>
 <p>Execution is based on the model logic that is enhanced by various extensions that allow scripting and access to your application.</p>
 <p>During Execution, Model Listeners and Application Listeners are invoked.</p>
 <p>Everytime a model is executed (started), an <code>instance</code> is created, and for each <code>element</code> that is executed it creates an `item' </p>
+<h2 id="datastore">Datastore<a class="headerlink" href="#datastore" title="Permanent link">#</a></h2>
+<p>At various stages of execution, instance object with its parts is saved into a datastore (defaults to MongoDB)</p>
+<p>Instances and Items can be queried through an API <a href="api/interfaces/IAPIData/">see API.data</a></p>
+<p><a href="data/">For more details about data management</a></p>
 <h3 id="invoking-execution-engine">Invoking Execution Engine<a class="headerlink" href="#invoking-execution-engine" title="Permanent link">#</a></h3>
 <p>You can communicate with the the execution <code>engine' through an API [see API.engine](api/interfaces/IAPIEngine.md)
  to</code>start<code>a Workflow or to</code>continue` executin of an Item, etc.</p>
@@ -1792,10 +1796,6 @@ to make them ideal platform to do long running business processes, durable servi
 <h3 id="execution-logic-and-scripting">Execution logic and scripting<a class="headerlink" href="#execution-logic-and-scripting" title="Permanent link">#</a></h3>
 <p>During Execution of the work bpmn-server can invoke custom scripts at various event or call back your business application</p>
 <p><a href="execution/">For more details about Execution behaviour</a></p>
-<h2 id="datastore">Datastore<a class="headerlink" href="#datastore" title="Permanent link">#</a></h2>
-<p>At various stages of execution, instance object with its parts is saved into a datastore (defaults to MongoDB)</p>
-<p>Instances and Items can be queried through an API <a href="api/interfaces/IAPIData/">see API.data</a></p>
-<p><a href="data/">For more details about data management</a></p>
 <h2 id="user-management-and-security">User Management and Security<a class="headerlink" href="#user-management-and-security" title="Permanent link">#</a></h2>
 <p><code>bpmn-server</code> is relying on the front-end applicaton to authenticate users and to pass user information through the API.</p>
 <ol>
