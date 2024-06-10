@@ -63,6 +63,14 @@ const server = new BPMNServer(configuration, logger,{cron:false});
 When running long running tasks and a system failure occures, bpmn-server saves the activity state at start and recognize the hung task on restart
 
 `cli` provides with an option to recover, however, you can write your own code :
+
+To detect hung instances:
+
+```js
+	var list = await server.dataStore.findItems({ "items.status": "start" });
+```
+To recover:
+
 ```js
 		let ret = await api.engine.invoke({ "items.id": item.id }, {}, null, { recover: true });
 ```

@@ -53,25 +53,58 @@ All of the above all available during process execution and event listeners.
 
 The instance object is similar to: 
 
+
 ```json
-instance: {
-  id;
-  name;
-//.. other instance attributes
-  items: { // items here
-    id;
-    elementId;
-    status;
-    vars;
-    // items here
-  }
-  data: { // data attributes here}
 
-  }
+{
+  "_id": {
+    "$oid": "66500c3ff0dedc85988cf6fa"
+  },
+  "version": 0,
+  "data": {
+        "caseId": 9787,
+        "starterUserId": "system",
+        "needsRepairs": "Yes",
+        "needsCleaning": "No"
+      },
+  "items": [
+  {
+      "id": "fd3d38fb-2eab-4ee4-a61e-0fe992f969c2",
+      "seq": 2,
+      "itemKey": null,
+      "tokenId": 0,
+      "elementId": "task_Buy",
+      "name": "Buy",
+      "status": "end",
+      "userName": "system",
+      "startedAt": {       "$date": "2024-05-24T03:40:47.744Z"     },
+      "endedAt": {        "$date": "2024-05-24T03:43:48.045Z"      },
+      "type": "bpmn:UserTask",
+      "timeDue": null,
+      "vars": {},
+      "instanceId": null,
+      "messageId": null,
+      "signalId": null,
+      "assignee": "system",
+      "candidateGroups": [        "Employee",        "Manager"      ],
+      "candidateUsers": [        "User1",        "User2"      ],
+      "dueDate": {        "$date": "2024-05-29T03:40:47.746Z"      },
+      "followUpDate": {        "$date": "2023-10-31T00:00:00.000Z"      },
+      "priority": "5"
+    },
+    
+  ],
+  "tokens": [/*Tokens Data */ ],
+  "loops": [],
+  "id": "0a081355-8050-45df-91db-8dd473b58bc0",
+  "name": "Buy Used Car",
+  "source": "/* ... bpmn in xml format */"
+  "savePoints": {/* SavePoints Data to restart at any point */}
+  "saved": {"$date": "2024-05-24T03:40:47.761Z"  },
+  "endedAt": {"$date": "2024-05-24T03:44:01.463Z"  },
+  "parentItemId": null
+}
 ```
-
-![MongDB Collection](images/mongo-instance-sample.png)
-
 
 ### instance.data Scope
 

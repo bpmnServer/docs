@@ -28,7 +28,7 @@ Typically your application has multiple bpmn models, a model is represented in a
 
 Each Model is made of various elements, an `element` can be a `node` in the diagram (events/tasks/gateway) or a  `flow`
 
-Models are saved by `bpmn-server` and can be queried [see API.model](api/interfaces/IAPIModel.md)
+Models are saved by `bpmn-server` into MongoDB and can be queried [see API.model](api/interfaces/IAPIModel.md)
 
 `bpmn-server` support all bpmn 2.0 elements [see Modeling Support](examples.md)
 
@@ -41,6 +41,13 @@ During Execution, Model Listeners and Application Listeners are invoked.
 
 Everytime a model is executed (started), an `instance` is created, and for each `element` that is executed it creates an `item' 
 
+## Datastore
+
+At various stages of execution, instance object with its parts is saved into a datastore (defaults to MongoDB)
+
+Instances and Items can be queried through an API [see API.data](api/interfaces/IAPIData.md)
+
+[For more details about data management](data.md)
 
 ### Invoking Execution Engine
 
@@ -53,14 +60,6 @@ You can communicate with the the execution `engine' through an API [see API.engi
 During Execution of the work bpmn-server can invoke custom scripts at various event or call back your business application
 
 [For more details about Execution behaviour](execution.md)
-
-## Datastore
-
-At various stages of execution, instance object with its parts is saved into a datastore (defaults to MongoDB)
-
-Instances and Items can be queried through an API [see API.data](api/interfaces/IAPIData.md)
-
-[For more details about data management](data.md)
 
 ## User Management and Security
 
