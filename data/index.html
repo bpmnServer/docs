@@ -1696,21 +1696,6 @@
 
 
 <h1 id="managing-data">Managing Data<a class="headerlink" href="#managing-data" title="Permanent link">#</a></h1>
-<!-- toc -->
-
-<ul>
-<li><a href="#introduction">Introduction</a></li>
-<li><a href="#instance-object">Instance Object</a></li>
-<li><a href="#instancedata-scope">instance.data Scope</a></li>
-<li><a href="#data-query">Data Query</a></li>
-<li><a href="#item-query">Item Query</a></li>
-<li><a href="#instance-query">Instance Query</a></li>
-<li><a href="#input-output-data">Input-Output Data</a></li>
-<li><a href="#inputoutput-using-scripts">Input/Output using Scripts</a></li>
-<li><a href="#inputoutput-using-camunda-extension-of-inputoutput-parameter">Input/Output using Camunda Extension of Input/Output Parameter</a></li>
-</ul>
-<!-- tocstop -->
-
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">#</a></h2>
 <p><code>bpmn-server</code> relies on a Database to store workflow information.
 This makes it suitable for long-running workflows and multi-servers.</p>
@@ -1984,64 +1969,6 @@ This makes it suitable for long-running workflows and multi-servers.</p>
 </tr>
 </tbody>
 </table>
-<ul>
-<li>Call
-  specs:</li>
-</ul>
-<pre class="mermaid"><code>        input:
-            var1    -&gt;  data.myVar1
-            var2    -&gt;  5
-
-        output:
-            scenario 1:
-            result  -&gt;  &lt;nothing&gt;
-            scenario 2:
-            result  -&gt;  output.result
-
-  on-entry:
-        item.input.var1= 51;
-
-  on-run:
-        item.output=call fun(item.input)
-
-  on-exit:
-
-        scenario 1:
-        data.result  = item.output;
-        scenario 2:
-        data.result  = item.output.result;</code></pre>
-<ul>
-<li>Throw</li>
-</ul>
-<pre class="mermaid"><code>    specs:
-
-    output:
-
-            caseId  -&gt;  data.caseId
-
-    on-entry:
-
-         item.output.caseId= data.caseId;
-
-    on-call:
-
-        throw (signal,item.output)</code></pre>
-<ul>
-<li>Catch</li>
-</ul>
-<pre class="mermaid"><code>    specs:  none
-
-    start trigger:
-
-            data.caseId=input.caseId;</code></pre>
-<ul>
-<li>Start</li>
-</ul>
-<pre class="mermaid"><code>    specs:  none
-
-    start trigger:
-
-            data.caseId=input.caseId;</code></pre>
 
 
 
