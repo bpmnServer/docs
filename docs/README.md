@@ -44,7 +44,7 @@ Everytime a model is executed (started), an `instance` is created, and for each 
 
 ### Invoking Execution Engine
 
-You can communicate with the the execution `engine' through an API [see API.engine](api/interfaces/IAPIEngine.md)
+You can communicate with the the execution `engine` through an API [see API.engine](api/interfaces/IAPIEngine.md)
  to `start` a Workflow or to `continue` executin of an Item, etc.
 
 [For more details about Invoking Execution Engine](invokation.md)
