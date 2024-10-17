@@ -9,10 +9,6 @@
       
       
       
-        <link rel="prev" href="../data/">
-      
-      
-        <link rel="next" href="../customization/">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -20,7 +16,7 @@
     
     
       
-        <title>Setup - bpmnServer docs</title>
+        <title>Index - bpmnServer docs</title>
       
     
     
@@ -72,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#installation" class="md-skip">
+        <a href="#how-to-pass-a-task-output-to-another" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Setup
+              Index
             
           </span>
         </div>
@@ -209,12 +205,10 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href=".." class="md-tabs__link">
           
   
@@ -373,30 +367,25 @@
       
   
   
-    
   
   
-  
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
-          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -407,7 +396,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             bpmn-server
@@ -544,30 +533,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Setup
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -576,59 +545,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation-of-bpmn-server-along-with-bpmn-web" class="md-nav__link">
-    <span class="md-ellipsis">
-      installation of bpmn-server along with bpmn-web
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="installation of bpmn-server along with bpmn-web">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#to-update" class="md-nav__link">
-    <span class="md-ellipsis">
-      To Update
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installation-of-bpmn-client" class="md-nav__link">
-    <span class="md-ellipsis">
-      installation of bpmn-client
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1629,176 +1545,10 @@
   
 
 
-<h1 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">#</a></h1>
-<h2 id="installation-of-bpmn-server-along-with-bpmn-web">installation of bpmn-server along with bpmn-web<a class="headerlink" href="#installation-of-bpmn-server-along-with-bpmn-web" title="Permanent link">#</a></h2>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/bpmnServer/bpmn-web.git
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># this will install bpmn-server along with all dependencies </span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>npm<span class="w"> </span>install<span class="w"> </span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># this will copy Initial files that are not tracked by .git; .env and appDelegate</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>npm<span class="w"> </span>run<span class="w"> </span>setup
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="c1"># now edit `.env` file, change your mongoDB connection</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c1"># after editing .env, run setup again to initialize DB </span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>npm<span class="w"> </span>run<span class="w"> </span>setup
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>npm<span class="w"> </span>run<span class="w"> </span>start
-</span></code></pre></div>
-<h3 id="to-update">To Update<a class="headerlink" href="#to-update" title="Permanent link">#</a></h3>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>pull
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>npm<span class="w"> </span>update
-</span></code></pre></div>
-<h2 id="installation-of-bpmn-client">installation of bpmn-client<a class="headerlink" href="#installation-of-bpmn-client" title="Permanent link">#</a></h2>
-<p>create a folder or use an existing project</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>clone<span class="w"> </span>.../bpmn-client-sample
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>copy<span class="w"> </span>sample.env<span class="w"> </span>.env
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>edit<span class="w"> </span>.env<span class="w"> </span>file
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>npm<span class="w"> </span>install
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c1"># To Update</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>git<span class="w"> </span>pull
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>npm<span class="w"> </span>update
-</span></code></pre></div>
-<h1 id="setup-bpmn-application-with-bpmn-server">Setup bpmn Application with bpmn-server<a class="headerlink" href="#setup-bpmn-application-with-bpmn-server" title="Permanent link">#</a></h1>
-<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">#</a></h2>
-<p>Every project must have a configuration file that is an instance of <a href="../api/classes/Configuration/">Configuration class</a></p>
-<p>This configuration file is passed to the BPMNServer constructor.</p>
-<p>For testing purposes, you can have a different configuration than production in same environemnt by passign a different object.</p>
-<h2 id="environment">Environment<a class="headerlink" href="#environment" title="Permanent link">#</a></h2>
-<p>things that vary between dev and production</p>
-<ul>
-<li>timers:</li>
-<li>forceTimersDelay</li>
-<li>precision</li>
-<li>database:</li>
-<li>MongoDB:
-    db_url
-    db</li>
-</ul>
-<div class="language-ts highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Configuration</span><span class="p">,</span><span class="w"> </span><span class="nx">ModelsDatastore</span><span class="p">,</span><span class="w"> </span><span class="nx">DataStore</span><span class="p">,</span><span class="w"> </span><span class="nx">Logger</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./&#39;</span><span class="p">;</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">MyAppDelegate</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./appDelegate&#39;</span><span class="p">;</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="kd">let</span><span class="w"> </span><span class="nx">definitionsPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">__dirname</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;/processes/&#39;</span><span class="p">;</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="kd">var</span><span class="w"> </span><span class="nx">configuration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Configuration</span><span class="p">({</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span><span class="nx">definitionsPath</span><span class="o">:</span><span class="w"> </span><span class="kt">definitionsPath</span><span class="p">,</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">  </span><span class="nx">timers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="nx">forceTimersDelay</span><span class="o">:</span><span class="w"> </span><span class="kt">1000</span><span class="p">,</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="nx">precision</span><span class="o">:</span><span class="w"> </span><span class="kt">3000</span><span class="p">,</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">  </span><span class="p">},</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">  </span><span class="nx">database</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="nx">MongoDB</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">      </span><span class="nx">db_url</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;mongodb://localhost:27017?retryWrites=true&amp;w=majority&#39;</span><span class="p">,</span>
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">      </span><span class="nx">db</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;bpmn&#39;</span><span class="p">,</span>
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">    </span><span class="p">},</span>
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">  </span><span class="p">},</span>
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">  </span><span class="cm">/* Define Server Components */</span>
-</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">  </span><span class="nx">logger</span><span class="o">:</span><span class="w"> </span><span class="kt">function</span><span class="w"> </span><span class="p">(</span><span class="nx">server</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">    </span><span class="ow">new</span><span class="w"> </span><span class="nx">Logger</span><span class="p">(</span><span class="nx">server</span><span class="p">);</span>
-</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">  </span><span class="p">},</span>
-</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">  </span><span class="nx">definitions</span><span class="o">:</span><span class="w"> </span><span class="kt">function</span><span class="w"> </span><span class="p">(</span><span class="nx">server</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ModelsDatastore</span><span class="p">(</span><span class="nx">server</span><span class="p">);</span>
-</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="w">  </span><span class="p">},</span>
-</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">  </span><span class="nx">appDelegate</span><span class="o">:</span><span class="w"> </span><span class="kt">function</span><span class="w"> </span><span class="p">(</span><span class="nx">server</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">MyAppDelegate</span><span class="p">(</span><span class="nx">server</span><span class="p">);</span>
-</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="w">  </span><span class="p">},</span>
-</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="w">  </span><span class="nx">dataStore</span><span class="o">:</span><span class="w"> </span><span class="kt">function</span><span class="w"> </span><span class="p">(</span><span class="nx">server</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">DataStore</span><span class="p">(</span><span class="nx">server</span><span class="p">);</span>
-</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="w">  </span><span class="p">},</span>
-</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a><span class="p">});</span>
-</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>
-</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a><span class="k">export</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">configuration</span><span class="w"> </span><span class="p">};</span>
-</span></code></pre></div>
-<p>Example of usage in javascript</p>
-<div class="language-ts highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">configuration</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;../configuration.js&#39;</span><span class="p">);</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">server</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">BPMNServer</span><span class="p">(</span><span class="nx">configuration</span><span class="p">,</span><span class="w"> </span><span class="nx">logger</span><span class="p">);</span>
-</span></code></pre></div>
-<p>or in Typesciprt</p>
-<div class="language-ts highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">configuration</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;../configuration.js&#39;</span><span class="p">;</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">server</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">BPMNServer</span><span class="p">(</span><span class="nx">configuration</span><span class="p">,</span><span class="w"> </span><span class="nx">logger</span><span class="p">);</span>
-</span></code></pre></div>
-<h2 id="processes-folder">Processes Folder<a class="headerlink" href="#processes-folder" title="Permanent link">#</a></h2>
-<p>This is where the definition files reside, the demo WebApp contains a set of those file for you to start with.</p>
-<h2 id="appdelegate-class">AppDelegate Class<a class="headerlink" href="#appdelegate-class" title="Permanent link">#</a></h2>
-<p>This class handles application specific calls</p>
-<div class="language-ts highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nx">moddleOptions</span><span class="p">;</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nx">servicesProvider</span><span class="p">;</span><span class="w">       </span><span class="c1">// to respond to all named services</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nx">sendEmail</span><span class="p">(</span><span class="nx">to</span><span class="p">,</span><span class="w"> </span><span class="nx">msg</span><span class="p">,</span><span class="w"> </span><span class="nx">body</span><span class="p">);</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="nx">executionStarted</span><span class="p">(</span><span class="nx">execution</span><span class="p">);</span>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="nx">executionEvent</span><span class="p">({</span><span class="w"> </span><span class="nx">event</span><span class="p">,</span><span class="w"> </span><span class="nx">item</span><span class="p">,</span><span class="w"> </span><span class="nx">execution</span><span class="w"> </span><span class="p">});</span>
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="nx">messageThrown</span><span class="p">(</span><span class="nx">signalId</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">messageMatchingKey</span><span class="o">:</span><span class="w"> </span><span class="kt">any</span><span class="p">,</span><span class="w"> </span><span class="nx">item</span><span class="o">:</span><span class="w"> </span><span class="kt">IItem</span><span class="p">);</span>
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="nx">signalThrown</span><span class="p">(</span><span class="nx">signalId</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">messageMatchingKey</span><span class="o">:</span><span class="w"> </span><span class="kt">any</span><span class="p">,</span><span class="w"> </span><span class="nx">item</span><span class="o">:</span><span class="w"> </span><span class="kt">IItem</span><span class="p">);</span>
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="nx">issueMessage</span><span class="p">(</span><span class="nx">messageId</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">);</span>
-</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="nx">issueSignal</span><span class="p">(</span><span class="nx">messageId</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">);</span>
-</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="nx">serviceCalled</span><span class="p">(</span><span class="nx">serviceName</span><span class="p">,</span><span class="nx">data</span><span class="p">,</span><span class="nx">item</span><span class="o">:</span><span class="w"> </span><span class="kt">IItem</span><span class="p">);</span>
-</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="nx">scopeEval</span><span class="p">(</span><span class="nx">scope</span><span class="p">,</span><span class="w"> </span><span class="nx">script</span><span class="p">);</span>
-</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="nx">scopeJS</span><span class="p">(</span><span class="nx">scope</span><span class="p">,</span><span class="w"> </span><span class="nx">script</span><span class="p">);</span>
-</span></code></pre></div>
-<h2 id="modeldatastore-options">ModelDataStore Options<a class="headerlink" href="#modeldatastore-options" title="Permanent link">#</a></h2>
-<h3 id="mongodb">MongoDB<a class="headerlink" href="#mongodb" title="Permanent link">#</a></h3>
-<p>This the preferred and default option, models are saved and loaded in MongoDB 
-Additionally, if you define a definitionsPath in configuration.ts, ModelsDatastore will monitor your path for changes, allowing you to edit bpmn files externally.</p>
-<h3 id="remote-load-only">Remote-Load-Only<a class="headerlink" href="#remote-load-only" title="Permanent link">#</a></h3>
-<p>This option can be used for minimal installation by having models at a remote location</p>
-<h1 id="bpmn-server-components">BPMN-SERVER components<a class="headerlink" href="#bpmn-server-components" title="Permanent link">#</a></h1>
-<h2 id="packages">Packages<a class="headerlink" href="#packages" title="Permanent link">#</a></h2>
-<h3 id="bpmn-server">bpmn-server<a class="headerlink" href="#bpmn-server" title="Permanent link">#</a></h3>
-<h3 id="bpmn-server-mongo">bpmn-server-mongo<a class="headerlink" href="#bpmn-server-mongo" title="Permanent link">#</a></h3>
-<h2 id="applications">Applications<a class="headerlink" href="#applications" title="Permanent link">#</a></h2>
-<table>
-<thead>
-<tr>
-<th>App</th>
-<th>desc</th>
-<th>datastore</th>
-<th>modelDatastore</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>bpmn-web</td>
-<td>Sample Full Demo with Model editor</td>
-<td>Mongo</td>
-<td>Mongo</td>
-</tr>
-<tr>
-<td>bpmn-browser</td>
-<td>Minimal implementation run in browser</td>
-<td>Memory</td>
-<td>fs</td>
-</tr>
-<tr>
-<td>bpmn-node</td>
-<td>Minimal implementation for command line</td>
-<td>Mongo</td>
-<td>Mongo</td>
-</tr>
-<tr>
-<td>Remote Access</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>bpmn-client</td>
-<td>Node Remote Access ti bpmn-web</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>bpmn-py</td>
-<td>Python Remote Access ti bpmn-web</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+  <h1>Index</h1>
+
+<h2 id="how-to-pass-a-task-output-to-another"><a href="output-processing/output%20processing">How to pass a Task output to another</a><a class="headerlink" href="#how-to-pass-a-task-output-to-another" title="Permanent link">#</a></h2>
+<h2 id="how-to-find-bpmnerrors"><a href="bpmn%20error">How to find bpmnErrors</a><a class="headerlink" href="#how-to-find-bpmnerrors" title="Permanent link">#</a></h2>
 
 
 
@@ -1831,44 +1581,6 @@ Additionally, if you define a definitionsPath in configuration.ts, ModelsDatasto
       
         <footer class="md-footer">
   
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
-        
-          
-          <a href="../data/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Data">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              <div class="md-ellipsis">
-                Data
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="../customization/" class="md-footer__link md-footer__link--next" aria-label="Next: Application Integration">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Application Integration
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
     
   
   <div class="md-footer-meta md-typeset">
