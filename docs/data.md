@@ -1,19 +1,5 @@
 # Managing Data
 
-<!-- toc -->
-
-  - [Introduction](#introduction)
-  - [Instance Object](#instance-object)
-- [instance.data Scope](#instancedata-scope)
-- [Data Query](#data-query)
-  - [Item Query](#item-query)
-  - [Instance Query](#instance-query)
-- [Input-Output Data](#input-output-data)
-  - [Input/Output using Scripts](#inputoutput-using-scripts)
-  - [Input/Output using Camunda Extension of Input/Output Parameter](#inputoutput-using-camunda-extension-of-inputoutput-parameter)
-
-<!-- tocstop -->
-
 ## Introduction
 
 `bpmn-server` relies on a Database to store workflow information.
@@ -246,68 +232,3 @@ Input and output is used in the following scenarios:
 | Service Call | parameters.var1= '123';                  | result=call(parameters) | data.var1= result.var1;                                 |
 | Start Event  | -                                        | start(parameters)       | data.var1= parameters.var1;<br /> data.var1=input.var1; |
 
-- Call
-  specs:
-
-```mermaid
-        input:
-            var1    ->  data.myVar1
-            var2    ->  5
-
-        output:
-            scenario 1:
-            result  ->  <nothing>
-            scenario 2:
-            result  ->  output.result
-
-  on-entry:
-        item.input.var1= 51;
-
-  on-run:
-        item.output=call fun(item.input)
-
-  on-exit:
-
-        scenario 1:
-        data.result  = item.output;
-        scenario 2:
-        data.result  = item.output.result;
-```
-
-- Throw
-
-```mermaid
-    specs:
-
-    output:
-
-            caseId  ->  data.caseId
-
-    on-entry:
-
-         item.output.caseId= data.caseId;
-
-    on-call:
-
-        throw (signal,item.output)
-```
-
-- Catch
-
-```mermaid
-    specs:  none
-
-    start trigger:
-
-            data.caseId=input.caseId;
-```
-
-- Start
-
-```mermaid
-    specs:  none
-
-    start trigger:
-
-            data.caseId=input.caseId;
-```
