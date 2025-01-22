@@ -5,8 +5,7 @@
 As workflow application can outlive Node.js applications, `bpmn-server` has out-of-the-box state presistence and variables, with concurrency across Node.js cluster and process instances
 to make them ideal platform to do long running business processes, durable services or scheduled backgound tasks.
 
-
-bpmnServer has multiple packages working with `bpmn-server`
+bpmnServer has multiple packages:
 
 - bpmn-web 
 
