@@ -5,8 +5,7 @@
 As workflow application can outlive Node.js applications, `bpmn-server` has out-of-the-box state presistence and variables, with concurrency across Node.js cluster and process instances
 to make them ideal platform to do long running business processes, durable services or scheduled backgound tasks.
 
-
-bpmnServer has multiple packages working with `bpmn-server`
+bpmnServer has multiple packages:
 
 - bpmn-web 
 
@@ -44,7 +43,7 @@ Everytime a model is executed (started), an `instance` is created, and for each 
 
 ### Invoking Execution Engine
 
-You can communicate with the the execution `engine' through an API [see API.engine](api/interfaces/IAPIEngine.md)
+You can communicate with the the execution `engine` through an API [see API.engine](api/interfaces/IAPIEngine.md)
  to `start` a Workflow or to `continue` executin of an Item, etc.
 
 [For more details about Invoking Execution Engine](invokation.md)
