@@ -140,3 +140,28 @@ serviceCalled(serviceName,data,item: IItem);
 scopeEval(scope, script);
 scopeJS(scope, script);
 ```
+
+## ModelDataStore Options
+### MongoDB
+This the preferred and default option, models are saved and loaded in MongoDB 
+Additionally, if you define a definitionsPath in configuration.ts, ModelsDatastore will monitor your path for changes, allowing you to edit bpmn files externally.
+### Remote-Load-Only
+This option can be used for minimal installation by having models at a remote location
+
+
+# BPMN-SERVER components
+## Packages
+### bpmn-server
+### bpmn-server-mongo
+
+## Applications
+
+| App          | desc                                     | datastore               | modelDatastore                                          |
+| ------------ | ---------------------------------------- | ----------------------- | ------------------------------------------------------- |
+| bpmn-web     | Sample Full Demo with Model editor       | Mongo                   | Mongo                                                   |
+| bpmn-browser | Minimal implementation run in browser    | Memory                  | fs                                                      |
+| bpmn-node    | Minimal implementation for command line  | Mongo                   | Mongo                                                   |
+| Remote Access | | |
+| bpmn-client  | Node Remote Access ti bpmn-web                |   |                                 |
+| bpmn-py      | Python Remote Access ti bpmn-web                |   |                                  |
+

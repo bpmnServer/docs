@@ -118,3 +118,19 @@ In Addition, `item.itemKey` is populated with the key value to facilitate data s
 ```json
     let items=await api.data.findItems({"items.elementId":'Activity_vote',"items.itemKey":"HR"});
 ```
+
+## Standard loop
+
+Parallel or sequential have the loop collection defined at start of the task.
+
+Standard Loop hower is different in that is executed multiple times until an explicit call to end the loop 
+
+![alt text](standard%20loop%201.png)
+
+To end the loop:
+```ts
+this.token.loop.end();
+```
+is done in either insided the task or as trigger end-event 
+
+![alt text](standard%20loop%202.png)

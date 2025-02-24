@@ -18,6 +18,8 @@ if you don't have MongoDB already installed you can [create a free cloud account
 
 git clone https://github.com/bpmnServer/bpmn-web.git
 
+cd bpmn-web
+
 npm install
 
 npm run setup
