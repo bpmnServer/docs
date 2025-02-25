@@ -1652,13 +1652,13 @@
 <h2 id="defining-signals-catch-events">Defining Signals Catch Events<a class="headerlink" href="#defining-signals-catch-events" title="Permanent link">#</a></h2>
 <p>In this example, we will demonstrate how can two seperate processes communicate through <strong>Signals</strong></p>
 <p>P.S. To define a Signal or a Message in the on-line modeler you need to click '+' to create the Signal first.</p>
-<p><img alt="Using Modeler" src="../../images/signal-model1.PNG" /> </p>
+<p><img alt="Using Modeler" src="../../images/signal-model1.png" /> </p>
 <p>In this Process we have 3 User Tasks (Task 1,2,3).
 Each of the above Tasks have a <strong>Boundary Event</strong> of type <code>Signal Catch Event</code>. Boundary Events start with the parent Task, and wait to be invoked.
 These events are:
 - Intrrupting; meaning then invoked they will cancel the parent Task
 - Have a SignalId <strong>Cancel_All</strong></p>
-<p><img alt="Using Modeler" src="../../images/signal-model2.PNG" /> </p>
+<p><img alt="Using Modeler" src="../../images/signal-model2.png" /> </p>
 <h2 id="throw-the-signal">Throw the Signal<a class="headerlink" href="#throw-the-signal" title="Permanent link">#</a></h2>
 <p>The simplest way to invoke a Signal is through a <strong>Throw Signal Event</strong>
 In the above example, we add a User Task <strong>Cancel ?</strong>, when Invoked by User, It with Throw the Signal <strong>Cancel_All</strong>, this will cause all waiting User Tasks to be cancelled.</p>
