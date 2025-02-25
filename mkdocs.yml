@@ -86,8 +86,9 @@ nav:
   - 'Event Based Gateway': examples/ebg.md
   - 'Multiple Start Events': examples/multiStartEvent.md
   - 'Input Fields': examples/inputFields.md
-  - 'Throwing/Catching Messages': examples/msg-throw-catch.md
   - 'Boundary Events': examples/boundary-events.md
+  - 'Throwing/Catching Messages': examples/msg-throw-catch.md
+  - 'Throwing/Catching Signals': examples/signal-throw-catch.md
   - 'Error/Escalate Events': examples/error_events.md
   - 'Call Process': examples/callProcess.md
   - 'Multi-instances (loop)': examples/loop.md
