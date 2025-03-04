@@ -1081,6 +1081,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#iso-8601-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      ISO 8601 format:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#developmenttest-environment-timer-modification" class="md-nav__link">
     <span class="md-ellipsis">
       Development/Test Environment Timer modification
@@ -1738,6 +1747,24 @@
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">bpmn</span><span class="o">:</span><span class="kt">timeCycle</span><span class="w"> </span><span class="nx">xsi</span><span class="o">:</span><span class="kt">type</span><span class="o">=</span><span class="s2">&quot;bpmn:tFormalExpression&quot;</span><span class="o">&gt;</span><span class="mf">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">*&lt;</span><span class="err">/bpmn:timeCycle&gt;</span>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/timerEventDefinition&gt;</span>
 </span></code></pre></div>
+<h2 id="iso-8601-format">ISO 8601 format:<a class="headerlink" href="#iso-8601-format" title="Permanent link">#</a></h2>
+<p>This format displays a duration in the following format: PnYnMnDTnHnMnS where n is the number for the corresponding interval:</p>
+<p>Y = years</p>
+<p>M = months</p>
+<p>W = weeks</p>
+<p>D = days</p>
+<p>T = delineator between dates and times, necessary to disambiguate between months and minutes</p>
+<p>H = hours</p>
+<p>M = minutes</p>
+<p>S = seconds</p>
+<p>You can leave certain intervals off  if they don't apply, but you must include the T before any time intervals (P<date>T<time>). Valid examples include:</p>
+<p>P3Y6M4DT12H30M5S (3 years, 6 months, 4 days, 12 hours, 30 minutes, and 5 seconds)</p>
+<p>P3DT12H (3 days and 12 hours)</p>
+<p>P1M (1 month)</p>
+<p>PT1M (1 minute)</p>
+<p>PT0S (0)</p>
+<p>P0.5Y (1/2 a year)</p>
+<p>PT1M3.025S (1 minute and 3025 milliseconds)</p>
 <h2 id="developmenttest-environment-timer-modification">Development/Test Environment Timer modification<a class="headerlink" href="#developmenttest-environment-timer-modification" title="Permanent link">#</a></h2>
 <p>bpmn-server allow you to modify the timer behaviour during development without changing bpmn definition</p>
 <p>By changing the configuration.ts to force timers to specific time</p>
