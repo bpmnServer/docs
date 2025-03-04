@@ -53,6 +53,42 @@ Example for cron format:
     </timerEventDefinition>
 ```
 
+## ISO 8601 format:
+This format displays a duration in the following format: PnYnMnDTnHnMnS where n is the number for the corresponding interval:
+
+Y = years
+
+M = months
+
+W = weeks
+
+D = days
+
+T = delineator between dates and times, necessary to disambiguate between months and minutes
+
+H = hours
+
+M = minutes
+
+S = seconds
+
+You can leave certain intervals off  if they don't apply, but you must include the T before any time intervals (P<date>T<time>). Valid examples include:
+
+P3Y6M4DT12H30M5S (3 years, 6 months, 4 days, 12 hours, 30 minutes, and 5 seconds)
+
+P3DT12H (3 days and 12 hours)
+
+P1M (1 month)
+
+PT1M (1 minute)
+
+PT0S (0)
+
+P0.5Y (1/2 a year)
+
+PT1M3.025S (1 minute and 3025 milliseconds)
+
+
 ## Development/Test Environment Timer modification
 
 bpmn-server allow you to modify the timer behaviour during development without changing bpmn definition
