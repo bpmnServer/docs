@@ -3,7 +3,7 @@
 ## Using WebApp
 ### Enable Security
 
-<!--include "security.md/#demo-application-authentication-and-security" -->
+<!--include "docs/security.md/#demo-application-authentication-and-security" -->
 
 include1.md here
 

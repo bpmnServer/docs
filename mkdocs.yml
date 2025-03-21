@@ -10,6 +10,8 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.sections
+    - navigation.breadcrumbs
+    - navigation.expand
     - toc.integrate
     - navigation.top
     - search.suggest
@@ -76,6 +78,7 @@ nav:
   - 'Application Integration': customization.md 
   - 'Advanced Topics': advanced.md
   - 'Frequently Asked Questions': faq.md
+  - 'Site Map': map.md
 
 - Examples/Features:
   - 'Service Task': examples/serviceTask.md
