@@ -115,6 +115,11 @@ the query syntax must be
 - item attributes are qualified by `items.\<attributeName\>`
 - data attributes are qualified by `data.\<attributeName\>`
 
+### Aggregate Query
+This is the most flexible and most powerful method to query data.
+It provides query on both Instances and Items, with Sort and pagination capability
+
+For Details see [api.data.find](./data_find.md)
 
 ### Item Query
 
@@ -166,6 +171,8 @@ instances = await api.data.findInstances({ 'items.id': item.id });
 
 instances = await api.data.findInstances({ 'data.caseId': 3030 });
 ```
+Release 2.3.2 introduced new [`data_find`] method that is more flexible and supports server pagination
+
 
 ## Input-Output Data
 

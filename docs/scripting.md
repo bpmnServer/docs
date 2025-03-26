@@ -17,13 +17,12 @@
 <!-- tocstop -->
 
 ## Introduction
-Scripting is using NodeJs `JavaScript` engine.
-scripts have full access to the running working full, as well as your application logic in:
-- AppDelegate class; as a general entry point
-- AppServices class; that responds to Service Tasks
-- AppUtils class; general purpose class to make your scripts more powerfull
 
-Scripting is used to add logic to your workflow and is achieved by:
+BPMN-Server provides scripting throughout the workflow.
+- The primary(default) script language is `JavaScript`.
+- `Python` support is also available, using prefix `$py` at the start of any script.
+
+Scripts are passed parameters values to the context:
 
 ## Model Expressions/Scripts
 
