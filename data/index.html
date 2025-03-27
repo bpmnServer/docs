@@ -615,6 +615,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#aggregate-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aggregate Query
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#item-query" class="md-nav__link">
     <span class="md-ellipsis">
       Item Query
@@ -1840,6 +1849,10 @@ This makes it suitable for long-running workflows and multi-servers.</p>
 - instance attributes unqualified
 - item attributes are qualified by <code>items.\&lt;attributeName\&gt;</code>
 - data attributes are qualified by <code>data.\&lt;attributeName\&gt;</code></p>
+<h3 id="aggregate-query">Aggregate Query<a class="headerlink" href="#aggregate-query" title="Permanent link">#</a></h3>
+<p>This is the most flexible and most powerful method to query data.
+It provides query on both Instances and Items, with Sort and pagination capability</p>
+<p>For Details see <a href="../data_find/">api.data.find</a></p>
 <h3 id="item-query">Item Query<a class="headerlink" href="#item-query" title="Permanent link">#</a></h3>
 <table>
 <thead>
@@ -1899,7 +1912,7 @@ This makes it suitable for long-running workflows and multi-servers.</p>
 </ul>
 <h3 id="instance-query">Instance Query<a class="headerlink" href="#instance-query" title="Permanent link">#</a></h3>
 <p>Instance Queries are similar to Items Query but return entire Instances with all the items</p>
-<div class="language-ts highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">// find instances having elementId</span>
+<p><div class="language-ts highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">// find instances having elementId</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nx">instances</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">api</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">findInstances</span><span class="p">({</span>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="s1">&#39;items.elementId&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;task_Buy&#39;</span><span class="p">,</span>
@@ -1913,6 +1926,7 @@ This makes it suitable for long-running workflows and multi-servers.</p>
 </span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
 </span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="nx">instances</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">api</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">findInstances</span><span class="p">({</span><span class="w"> </span><span class="s1">&#39;data.caseId&#39;</span><span class="o">:</span><span class="w"> </span><span class="mf">3030</span><span class="w"> </span><span class="p">});</span>
 </span></code></pre></div>
+Release 2.3.2 introduced new [<code>data_find</code>] method that is more flexible and supports server pagination</p>
 <h2 id="input-output-data">Input-Output Data<a class="headerlink" href="#input-output-data" title="Permanent link">#</a></h2>
 <p>Input and output is used in the following scenarios:</p>
 <ul>
