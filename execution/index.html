@@ -1812,11 +1812,13 @@ Once the process goes into a **wait** state, it waits for some external input:
 <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>    return {error:&#39;Invalid input&#39;};
 </span></code></pre></div></p>
 <p>As a result execution will raise an exception and the command will fail.</p>
+<p><img alt="validate-error" src="../image-3.png" /></p>
 <h2 id="bpmn-errors">BPMN Errors<a class="headerlink" href="#bpmn-errors" title="Permanent link">#</a></h2>
 <p>All Scripts and Services can Raise <code>BPMN Errors</code>, to be handled by the appropriate Error node
 <div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>    return {bpmnError:&#39;error code&#39;};
 </span></code></pre></div>
-All Scripts and Services can Raise <code>BPMN Escalation</code>, to be handled by the appropriate Catch Escalation Event
+<img alt="See Errors and Escalation Events" src="../examples/error_events/" /></p>
+<p>All Scripts and Services can Raise <code>BPMN Escalation</code>, to be handled by the appropriate Catch Escalation Event
 <div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>    return {escalation:&#39;escalation code&#39;};
 </span></code></pre></div>
 The current item status will be <code>error</code> and execution will continue at the Error node.</p>
