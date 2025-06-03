@@ -9,10 +9,6 @@
       
       
       
-        <link rel="prev" href="../invokation/">
-      
-      
-        <link rel="next" href="../scripting/">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -20,7 +16,7 @@
     
     
       
-        <title>Workflow Execution - bpmnServer docs</title>
+        <title>BPMN-Server Designer FAQ - bpmnServer docs</title>
       
     
     
@@ -72,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#workflow-execution" class="md-skip">
+        <a href="#bpmn-server-designer-faq" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Workflow Execution
+              BPMN-Server Designer FAQ
             
           </span>
         </div>
@@ -209,12 +205,10 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href=".." class="md-tabs__link">
           
   
@@ -373,30 +367,27 @@
       
   
   
-    
   
   
-  
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           
-          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -407,7 +398,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             bpmn-server
@@ -460,30 +451,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Workflow Execution
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../execution/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -492,95 +463,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#starting-a-process" class="md-nav__link">
-    <span class="md-ellipsis">
-      Starting a Process
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#invoking-a-user-task" class="md-nav__link">
-    <span class="md-ellipsis">
-      Invoking a User Task
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#execution-sequence" class="md-nav__link">
-    <span class="md-ellipsis">
-      Execution Sequence
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Execution Sequence">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#enginestart" class="md-nav__link">
-    <span class="md-ellipsis">
-      engine.start
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#engineassign" class="md-nav__link">
-    <span class="md-ellipsis">
-      engine.assign
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#engineinvoke" class="md-nav__link">
-    <span class="md-ellipsis">
-      engine.invoke
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#engineinvoke-with-validation-failure" class="md-nav__link">
-    <span class="md-ellipsis">
-      engine.invoke (with validation failure)
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1717,106 +1599,103 @@
   
 
 
-<h1 id="workflow-execution">Workflow Execution<a class="headerlink" href="#workflow-execution" title="Permanent link">#</a></h1>
-<p>Execution is based on the model logic that is enhanced by various extensions that allow scripting and access to your application.</p>
-<p>During Execution, Model Listeners and Application Listeners are invoked.</p>
-<p>Process Execution is performed based on BPMN 2.0 standards providing access to the following components to participate:
-- Event Listener
-- Scripts
-- Services
-- AppDelegate</p>
-<p>See <a href="../scripting/">more about scripts</a></p>
-<p>The execution <code>engine</code> is availabe through an API <a href="../api/interfaces/IAPIEngine/">see API.engine</a>.</p>
-<h2 id="starting-a-process">Starting a Process<a class="headerlink" href="#starting-a-process" title="Permanent link">#</a></h2>
-<p>For more details about scenarios of Invoking Execution Engine <a href="../invokation/">Engine Invokation</a></p>
-<table><tr><td>
-This illustrate the flow of Model Execution:
-Once the process goes into a **wait** state, it waits for some external input:
-
-- User Input
-- Message/Signal to be received
-- Timer to expire
-
-</td><td>
-
-![](images/processStart.png)
-
-</td></tr></table>
-
-<h2 id="invoking-a-user-task">Invoking a User Task<a class="headerlink" href="#invoking-a-user-task" title="Permanent link">#</a></h2>
-<p><img alt="" src="../images/InvokeTask.png" /></p>
-<h2 id="execution-sequence">Execution Sequence<a class="headerlink" href="#execution-sequence" title="Permanent link">#</a></h2>
-<p>Below is the sequence of events after each command:</p>
-<h3 id="enginestart">engine.start<a class="headerlink" href="#enginestart" title="Permanent link">#</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>---Event: --&gt;process.start { option1: 1234 }
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>=========== Process Start ===============
+<h1 id="bpmn-server-designer-faq">BPMN-Server Designer FAQ<a class="headerlink" href="#bpmn-server-designer-faq" title="Permanent link">#</a></h1>
+<p>A curated list of frequently asked questions for BPMN designers working with the <a href="https://bpmn-server.github.io">bpmn-server</a> engine.</p>
+<hr />
+<h2 id="1-how-do-i-trigger-a-process-from-code">1. How do I trigger a process from code?<a class="headerlink" href="#1-how-do-i-trigger-a-process-from-code" title="Permanent link">#</a></h2>
+<p>You can trigger a process from your code by invoking the process through an API. Here is an example of how you can do this:</p>
+<div class="language-ts highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">api</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">BPMNAPI</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">BPMNServer</span><span class="p">(</span><span class="nx">configuration</span><span class="p">,</span><span class="ow">new</span><span class="w"> </span><span class="nx">Logger</span><span class="p">({</span><span class="w"> </span><span class="nx">toConsole</span><span class="o">:</span><span class="w"> </span><span class="kt">false</span><span class="p">}),{</span><span class="nx">cron</span><span class="o">:</span><span class="kt">false</span><span class="p">}));</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kd">let</span><span class="w"> </span><span class="nx">response</span><span class="o">=</span><span class="k">await</span><span class="w"> </span><span class="nx">api</span><span class="p">.</span><span class="nx">engine</span><span class="p">.</span><span class="nx">start</span><span class="p">(</span><span class="s1">&#39;Leave Request&#39;</span><span class="p">,{</span><span class="kr">type</span><span class="o">:</span><span class="s1">&#39;Vacation&#39;</span><span class="p">},</span><span class="nx">SystemUser</span><span class="p">);</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>---Event: --&gt;start item: StartEvent_1 { option1: 1234 }
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>---Event: --&gt;process.saving { option1: 1234 }
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>---Event: --&gt;end item: StartEvent_1 { option1: 1234 }
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>---Event: --&gt;start item: Request { option1: 1234 }
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>---Event: --&gt;wait item: Request { option1: 1234 }
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>---Event: --&gt;process.wait { option1: 1234 }
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>---Event: --&gt;process.saving { option1: 1234 }
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kd">let</span><span class="w"> </span><span class="nx">instanceId</span><span class="o">=</span><span class="nx">response</span><span class="p">.</span><span class="nx">instance</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Invoking Buy&#39;</span><span class="p">);</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">api</span><span class="p">.</span><span class="nx">engine</span><span class="p">.</span><span class="nx">invoke</span><span class="p">({</span><span class="nx">instanceId</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="nx">elementId</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;task_Buy&#39;</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">model</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Thunderbird&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">needsRepairs</span><span class="o">:</span><span class="w"> </span><span class="kt">false</span><span class="p">,</span><span class="w"> </span><span class="nx">needsCleaning</span><span class="o">:</span><span class="w"> </span><span class="kt">false</span><span class="w"> </span><span class="p">},</span><span class="nx">SystemUser</span><span class="p">);</span>
 </span></code></pre></div>
-<h3 id="engineassign">engine.assign<a class="headerlink" href="#engineassign" title="Permanent link">#</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>---calling assign-----
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>---Event: --&gt;process.restored { option1: 1234, restored: true }
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>---Event: --&gt;assign item: Request { option1: 1234, restored: true }
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>---Event: --&gt;validate item: Request { option1: 1234, restored: true }
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>---Event: --&gt;process.saving { option1: 1234, restored: true }
+<p>In this code, the <code>BPMNAPI</code> is used to start a process and then invoke a task within that process. The <code>SystemUser</code> is used to define the user that is invoking the process and task. In real applications, you would get the <code>userName</code> and <code>userGroups</code> from your application's User Access 
+[Reference: "./docs\invokation.md##-invoking-workflow-scenarios-##-invoking-proccess-through-api"].</p>
+<h2 id="2-how-can-i-assign-tasks-to-specific-users-or-roles">2. How can I assign tasks to specific users or roles?<a class="headerlink" href="#2-how-can-i-assign-tasks-to-specific-users-or-roles" title="Permanent link">#</a></h2>
+<p>Use a <code>userTask</code> with an assignee from process data:</p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">&lt;bpmn:userTask</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;task1&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Review&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">&lt;bpmn:extensionElements&gt;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">&lt;camunda:assignee&gt;</span>\${data.reviewer}<span class="nt">&lt;/camunda:assignee&gt;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">&lt;/bpmn:extensionElements&gt;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nt">&lt;/bpmn:userTask&gt;</span>
 </span></code></pre></div>
-<h3 id="engineinvoke">engine.invoke<a class="headerlink" href="#engineinvoke" title="Permanent link">#</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>---calling invoke-----
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>---Event: --&gt;process.restored { option1: 1234, restored: true }
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>---Event: --&gt;process.invoke { option1: 1234, restored: true }
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>---Event: --&gt;validate item: Request { option1: 1234, restored: true }
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>---Event: --&gt;end item: Request { option1: 1234, restored: true }
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>---Event: --&gt;start item: Approve { option1: 1234, restored: true }
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>---Event: --&gt;wait item: Approve { option1: 1234, restored: true }
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>---Event: --&gt;process.invoked { option1: 1234, restored: true }
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>---Event: --&gt;process.saving { option1: 1234, restored: true }
+<hr />
+<h2 id="3-how-do-i-implement-parallel-approvals-multi-instance">3. How do I implement parallel approvals (multi-instance)?<a class="headerlink" href="#3-how-do-i-implement-parallel-approvals-multi-instance" title="Permanent link">#</a></h2>
+<p>Use <code>multiInstanceLoopCharacteristics</code>:</p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">&lt;bpmn:userTask</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;approveTask&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Department Approval&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">&lt;bpmn:multiInstanceLoopCharacteristics</span><span class="w"> </span><span class="na">isSequential=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nt">&lt;bpmn:loopCardinality&gt;</span>data.departments.length<span class="nt">&lt;/bpmn:loopCardinality&gt;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nt">&lt;/bpmn:multiInstanceLoopCharacteristics&gt;</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nt">&lt;/bpmn:userTask&gt;</span>
 </span></code></pre></div>
-<h2 id="engineinvoke-with-validation-failure">engine.invoke (with validation failure)<a class="headerlink" href="#engineinvoke-with-validation-failure" title="Permanent link">#</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>---invoke Approve-----
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>---Event: --&gt;process.restored { option1: 1234, restored: true }
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>---Event: --&gt;process.invoke { option1: 1234, restored: true }
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>---Event: --&gt;validate item: Approve { option1: 1234, restored: true }
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>---Event: --&gt;process.error { option1: 1234, restored: true }
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>***************BPMNServer UNCAUGHT ERROR***********
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>Error Message: Error: Validation failed with error:Not a valid value
+<hr />
+<h2 id="4-can-i-call-a-subprocess-or-reusable-workflow">4. Can I call a subprocess or reusable workflow?<a class="headerlink" href="#4-can-i-call-a-subprocess-or-reusable-workflow" title="Permanent link">#</a></h2>
+<p>Yes, with a <code>callActivity</code>:</p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">&lt;bpmn:callActivity</span><span class="w"> </span><span class="na">calledElement=</span><span class="s">&quot;subProcessId&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
 </span></code></pre></div>
-<h1 id="scope-and-variables">Scope and variables<a class="headerlink" href="#scope-and-variables" title="Permanent link">#</a></h1>
-<p><a href="../scripting/#Scripts_scope_and_variables">See Scope and Variables in Scripts</a></p>
-<h1 id="scripts-and-services-impact-on-execution">Scripts and Services Impact on Execution<a class="headerlink" href="#scripts-and-services-impact-on-execution" title="Permanent link">#</a></h1>
-<p>Scripts and Services can impact workflow in the following manners:
-- Change workflow Data
-- Service Tasks and Script Tasks, receive input and return output
-- Scripts and Service Task can raise Errors and Exceptions</p>
-<h1 id="raisng-errors-escalations-and-exceptions">Raisng Errors , Escalations and Exceptions<a class="headerlink" href="#raisng-errors-escalations-and-exceptions" title="Permanent link">#</a></h1>
-<h2 id="validation-scripts">Validation Scripts<a class="headerlink" href="#validation-scripts" title="Permanent link">#</a></h2>
-<p>Validation Scripts can return an error as such:
-<div class="language-js highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="nx">error</span><span class="o">:</span><span class="s1">&#39;Invalid input&#39;</span><span class="p">};</span>
-</span></code></pre></div></p>
-<p>As a result execution will raise an exception and the command will fail.</p>
-<p><img alt="validate-error" src="../image-3.png" /></p>
-<h2 id="bpmn-errors">BPMN Errors<a class="headerlink" href="#bpmn-errors" title="Permanent link">#</a></h2>
-<p>All Scripts and Services can Raise <code>BPMN Errors</code>, to be handled by the appropriate Error node
-<div class="language-js highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="nx">bpmnError</span><span class="o">:</span><span class="s1">&#39;error code&#39;</span><span class="p">};</span>
+<hr />
+<h2 id="5-how-do-i-raise-an-error-or-escalation-from-a-script-task">5. How do I raise an error or escalation from a script task?<a class="headerlink" href="#5-how-do-i-raise-an-error-or-escalation-from-a-script-task" title="Permanent link">#</a></h2>
+<p>Use these methods inside a service or script:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">this</span><span class="p">.</span><span class="nx">raiseError</span><span class="p">(</span><span class="s1">&#39;validationFailed&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Data is invalid&#39;</span><span class="p">);</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">this</span><span class="p">.</span><span class="nx">raiseEscalation</span><span class="p">(</span><span class="s1">&#39;NotifyAdmin&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">user</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;admin&#39;</span><span class="w"> </span><span class="p">});</span>
 </span></code></pre></div>
-<img alt="See Errors and Escalation Events" src="../examples/error_events/" /></p>
-<p>All Scripts and Services can Raise <code>BPMN Escalation</code>, to be handled by the appropriate Catch Escalation Event
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>    return {escalation:&#39;escalation code&#39;};
+<hr />
+<h2 id="6-can-i-persist-data-or-log-custom-metadata">6. Can I persist data or log custom metadata?<a class="headerlink" href="#6-can-i-persist-data-or-log-custom-metadata" title="Permanent link">#</a></h2>
+<p>Yes:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">this</span><span class="p">.</span><span class="nx">saveData</span><span class="p">({</span><span class="w"> </span><span class="nx">step</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;approved&#39;</span><span class="w"> </span><span class="p">});</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">this</span><span class="p">.</span><span class="nx">logger</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Custom note&#39;</span><span class="p">);</span>
 </span></code></pre></div>
-The current item status will be <code>error</code> and execution will continue at the Error node.</p>
-<h2 id="throwing-exceptions">Throwing Exceptions<a class="headerlink" href="#throwing-exceptions" title="Permanent link">#</a></h2>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="w">    </span><span class="ow">new</span><span class="w"> </span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;error message&#39;</span><span class="p">);</span>
+<hr />
+<h2 id="7-how-can-i-run-bpmn-tests-or-simulate-scenarios">7. How can I run BPMN tests or simulate scenarios?<a class="headerlink" href="#7-how-can-i-run-bpmn-tests-or-simulate-scenarios" title="Permanent link">#</a></h2>
+<p>Use test automation:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nx">engine</span><span class="p">.</span><span class="nx">start</span><span class="p">(</span><span class="s1">&#39;TestProcess&#39;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">instance</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="nx">assert</span><span class="p">(</span><span class="nx">instance</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">result</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;OK&#39;</span><span class="p">);</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="p">});</span>
 </span></code></pre></div>
-<p>This will raise an Excption, stop workflow execution and save the instance datatake action</p>
+<hr />
+<h2 id="8-how-do-i-handle-timeouts-or-delays">8. How do I handle timeouts or delays?<a class="headerlink" href="#8-how-do-i-handle-timeouts-or-delays" title="Permanent link">#</a></h2>
+<p>Use a Timer Event:</p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nt">&lt;bpmn:intermediateCatchEvent</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;wait1&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nt">&lt;bpmn:timerEventDefinition&gt;</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="nt">&lt;bpmn:timeDuration&gt;</span>PT30S<span class="nt">&lt;/bpmn:timeDuration&gt;</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span><span class="nt">&lt;/bpmn:timerEventDefinition&gt;</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="nt">&lt;/bpmn:intermediateCatchEvent&gt;</span>
+</span></code></pre></div>
+<hr />
+<h2 id="9-what-happens-if-the-server-crashes-or-restarts">9. What happens if the server crashes or restarts?<a class="headerlink" href="#9-what-happens-if-the-server-crashes-or-restarts" title="Permanent link">#</a></h2>
+<ul>
+<li>Processes auto-resume from the database</li>
+<li>Engine supports fail-safe recovery</li>
+</ul>
+<hr />
+<h2 id="10-can-i-define-custom-service-tasks-api-db-email">10. Can I define custom service tasks (API, DB, Email)?<a class="headerlink" href="#10-can-i-define-custom-service-tasks-api-db-email" title="Permanent link">#</a></h2>
+<p>Yes:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nx">engine</span><span class="p">.</span><span class="nx">executeServiceTask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">task</span><span class="p">,</span><span class="w"> </span><span class="nx">context</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">task</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;SendEmail&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">EmailService</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="p">};</span>
+</span></code></pre></div>
+<hr />
+<h2 id="11-is-versioning-supported">11. Is versioning supported?<a class="headerlink" href="#11-is-versioning-supported" title="Permanent link">#</a></h2>
+<p>Yes, you can deploy and run multiple versions of a process.</p>
+<hr />
+<h2 id="12-how-do-i-trace-or-debug-a-process">12. How do I trace or debug a process?<a class="headerlink" href="#12-how-do-i-trace-or-debug-a-process" title="Permanent link">#</a></h2>
+<p>Enable logging or use:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nx">engine</span><span class="p">.</span><span class="nx">trace</span><span class="p">(</span><span class="nx">instanceId</span><span class="p">);</span>
+</span></code></pre></div>
+<p>Also enable <code>logLevel: debug</code> in the engine configuration.</p>
+<hr />
+<h2 id="13-can-i-pauseresume-a-process-manually">13. Can I pause/resume a process manually?<a class="headerlink" href="#13-can-i-pauseresume-a-process-manually" title="Permanent link">#</a></h2>
+<p>Yes, processes pause at <code>wait</code> states. Resume via:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nx">engine</span><span class="p">.</span><span class="nx">invoke</span><span class="p">(</span><span class="nx">instanceId</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">approved</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">});</span>
+</span></code></pre></div>
+<hr />
 
 
 
@@ -1849,44 +1728,6 @@ The current item status will be <code>error</code> and execution will continue a
       
         <footer class="md-footer">
   
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
-        
-          
-          <a href="../invokation/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Invoking Workflows">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              <div class="md-ellipsis">
-                Invoking Workflows
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="../scripting/" class="md-footer__link md-footer__link--next" aria-label="Next: Scripting">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Scripting
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
     
   
   <div class="md-footer-meta md-typeset">

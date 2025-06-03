@@ -539,16 +539,39 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#model-expressionsscripts" class="md-nav__link">
+  <a href="#script-languages" class="md-nav__link">
     <span class="md-ellipsis">
-      Model Expressions/Scripts
+      Script Languages
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Model Expressions/Scripts">
+    <nav class="md-nav" aria-label="Script Languages">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      JavaScript
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#model-expressions" class="md-nav__link">
     <span class="md-ellipsis">
       Model Expressions
@@ -594,11 +617,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-        
           <li class="md-nav__item">
   <a href="#model-listeners" class="md-nav__link">
     <span class="md-ellipsis">
@@ -629,26 +647,20 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#execution-listeners" class="md-nav__link">
+  <a href="#execution-listeners-events" class="md-nav__link">
     <span class="md-ellipsis">
-      Execution Listeners
+      Execution Listeners (Events)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Execution Listeners">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#task-listeners" class="md-nav__link">
     <span class="md-ellipsis">
       Task Listeners
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1803,27 +1815,49 @@
 <!-- tocstop -->
 
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">#</a></h2>
-<p>BPMN-Server provides scripting throughout the workflow.
-- The primary(default) script language is <code>JavaScript</code>.
-- <code>Python</code> support is also available, using prefix <code>$py</code> at the start of any script.</p>
+<p>BPMN-Server provides scripting throughout the workflow.</p>
+<h2 id="script-languages">Script Languages<a class="headerlink" href="#script-languages" title="Permanent link">#</a></h2>
+<h3 id="javascript">JavaScript<a class="headerlink" href="#javascript" title="Permanent link">#</a></h3>
+<div class="language-text highlight"><pre><span></span><code>The primary(default) script language is `JavaScript`.
+</code></pre></div>
+<p><code>xml
+    &lt;bpmn2:startEvent id="StartEvent_1"&gt;
+      &lt;bpmn2:extensionElements&gt;
+        &lt;camunda:executionListener event="start"&gt;
+          &lt;camunda:script scriptFormat="JavaScript"&gt;console.log("Hello World "+item.name);&lt;/camunda:script&gt;
+        &lt;/camunda:executionListener&gt;
+      &lt;/bpmn2:extensionElements&gt;
+    &lt;/bpmn2:startEvent&gt;</code></p>
+<h3 id="python">Python<a class="headerlink" href="#python" title="Permanent link">#</a></h3>
+<div class="language-text highlight"><pre><span></span><code>For python scripts, use prefix `$py` at the start of any script.
+</code></pre></div>
+<p><code>python
+$py print(f"Hello {item['name']}")</code>
+<code>xml
+    &lt;bpmn2:startEvent id="StartEvent_1"&gt;
+      &lt;bpmn2:extensionElements&gt;
+        &lt;camunda:executionListener event="start"&gt;
+          &lt;camunda:script scriptFormat="JavaScript"&gt;$py print(f"Hello {item['name']}, y")&lt;/camunda:script&gt;
+        &lt;/camunda:executionListener&gt;
+      &lt;/bpmn2:extensionElements&gt;
+    &lt;/bpmn2:startEvent&gt;</code></p>
 <p>Scripts are passed parameters values to the context:</p>
-<h2 id="model-expressionsscripts">Model Expressions/Scripts<a class="headerlink" href="#model-expressionsscripts" title="Permanent link">#</a></h2>
-<h3 id="model-expressions">Model Expressions<a class="headerlink" href="#model-expressions" title="Permanent link">#</a></h3>
+<h2 id="model-expressions">Model Expressions<a class="headerlink" href="#model-expressions" title="Permanent link">#</a></h2>
 <h4 id="conditional-flow-examples">conditional flow examples:<a class="headerlink" href="#conditional-flow-examples" title="Permanent link">#</a></h4>
 <p><img align="right" alt="flow-conditin" src="../images/flow-condition.png" /></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    data.approval==&#39;Approved&#39;
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  or 
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    (data.approval==&#39;Approved&#39;)
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    (this.data.v1 + this.data.v2)
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    (this.data.v1 == this.data.v2)
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    (this.data.v1 + this.data.v2)&gt;0
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    (this.data.v1 + this.data.v2)&lt;4
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>    data.approval==&#39;Approved&#39;
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  or 
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    (data.approval==&#39;Approved&#39;)
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    (this.data.v1 + this.data.v2)
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    (this.data.v1 == this.data.v2)
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    (this.data.v1 + this.data.v2)&gt;0
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    (this.data.v1 + this.data.v2)&lt;4
 </span></code></pre></div>
 <div style="clear:both;" />
 
 <h4 id="timers-examples">timers examples:<a class="headerlink" href="#timers-examples" title="Permanent link">#</a></h4>
 <p>For duration timers
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>    $appServices.dateAdd(item.dateStarted,10,&#39;days&#39;)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>    $appServices.dateAdd(item.dateStarted,10,&#39;days&#39;)
 </span></code></pre></div></p>
 <h4 id="inputoutput">Input/Output<a class="headerlink" href="#inputoutput" title="Permanent link">#</a></h4>
 <table>
@@ -1844,15 +1878,15 @@
 <p>These are similar to expressions above but can invoke async functions and can include more complete Javascript</p>
 <p>No syntax required for these scripts</p>
 <h4 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h4>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>    let userManager=await appServices.retrieveManagerForUser(item.userName);
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    data.manager=userManager;
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    if (data.var1&gt;5) {
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>        data.message=&#39;any text here&#39;;
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    }
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>    let userManager=await appServices.retrieveManagerForUser(item.userName);
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    data.manager=userManager;
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    if (data.var1&gt;5) {
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>        data.message=&#39;any text here&#39;;
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    }
 </span></code></pre></div>
-<h2 id="execution-listeners">Execution Listeners<a class="headerlink" href="#execution-listeners" title="Permanent link">#</a></h2>
+<h2 id="execution-listeners-events">Execution Listeners (Events)<a class="headerlink" href="#execution-listeners-events" title="Permanent link">#</a></h2>
 <p>These are for all node types and processes</p>
 <p><img align="left" alt="flow-conditin" src="../images/execution%20listener.png" /></p>
 <table>
@@ -1875,7 +1909,7 @@
 </table>
 <div style="clear:both;" />
 
-<h3 id="task-listeners">Task Listeners<a class="headerlink" href="#task-listeners" title="Permanent link">#</a></h3>
+<h2 id="task-listeners">Task Listeners<a class="headerlink" href="#task-listeners" title="Permanent link">#</a></h2>
 <p>These are for User Tasks only</p>
 <table>
 <thead>
@@ -1896,28 +1930,28 @@
 </tbody>
 </table>
 <p><code>validate</code> scripts have a special handling, that they can stop execution by raising errors, to return errors to the execution:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>    // do some checking here
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    return {error:&#39;Not a valid Input&#39;};
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>    // do some checking here
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    return {error:&#39;Not a valid Input&#39;};
 </span></code></pre></div>
 As a result execution will raise an exception and the command will fail.</p>
 <h2 id="application-listener">Application Listener<a class="headerlink" href="#application-listener" title="Permanent link">#</a></h2>
 <p>You can place a listener in your application delegate or your execution scripts class to listen to all events
 Example:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>    const api = new BPMNAPI(new BPMNServer(configuration,new Logger({ toConsole: false}),{cron:false}));
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    let options= {option1:1234}; //,option2:SystemUser};
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    api.server.listener.on(&#39;all&#39;, async function ({ context, event, }) {
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>        if (event==&#39;process.restored&#39;)
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>            {
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>            context.options=options;
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>            context.options[&#39;restored&#39;]=true;
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>            }
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>        if (event.startsWith(&#39;process.&#39;))
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>            console.log(&#39;---Event: --&gt;&#39; + event , context.options);
-</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>        else 
-</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>            console.log(&#39;---Event: --&gt;&#39;+event, &#39;item:&#39;,context.item.elementId,context.options );
-</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>    });
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>    const api = new BPMNAPI(new BPMNServer(configuration,new Logger({ toConsole: false}),{cron:false}));
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    let options= {option1:1234}; //,option2:SystemUser};
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    api.server.listener.on(&#39;all&#39;, async function ({ context, event, }) {
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>        if (event==&#39;process.restored&#39;)
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>            {
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>            context.options=options;
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>            context.options[&#39;restored&#39;]=true;
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>            }
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>        if (event.startsWith(&#39;process.&#39;))
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>            console.log(&#39;---Event: --&gt;&#39; + event , context.options);
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>        else 
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>            console.log(&#39;---Event: --&gt;&#39;+event, &#39;item:&#39;,context.item.elementId,context.options );
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>    });
 </span></code></pre></div></p>
 <h1 id="scripts-scope-and-variables">Scripts Scope and variables<a class="headerlink" href="#scripts-scope-and-variables" title="Permanent link">#</a></h1>
 <h2 id="item-scope">Item Scope<a class="headerlink" href="#item-scope" title="Permanent link">#</a></h2>
@@ -1966,26 +2000,26 @@ Example:
 </table>
 <ul>
 <li>Common Item properties:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>    id;                 
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    options;
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    context;    //execution options
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    elementId;  // Model Node Id
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>    id;                 
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    options;
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    context;    //execution options
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    elementId;  // Model Node Id
 </span></code></pre></div></li>
 <li>Item methods 
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>    log(msg)        // issues a log message into the logger
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    info(msg)       // issues an information message
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>    log(msg)        // issues a log message into the logger
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    info(msg)       // issues an information message
 </span></code></pre></div></li>
 <li>Execution (context) properties
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>    instance: InstanceObject;
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    tokens = new Map();
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    definition: IDefinition;
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    process : Process;
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    item;
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    messageMatchingKey;
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    userName;
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>    servicesProvider;
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    options;
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>    operation;
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>    instance: InstanceObject;
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    tokens = new Map();
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    definition: IDefinition;
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    process : Process;
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    item;
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>    messageMatchingKey;
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>    userName;
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>    servicesProvider;
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>    options;
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>    operation;
 </span></code></pre></div></li>
 </ul>
 <h2 id="execution-scope">Execution Scope<a class="headerlink" href="#execution-scope" title="Permanent link">#</a></h2>
@@ -2019,21 +2053,21 @@ Example:
 <h2 id="application-listener_1">Application Listener<a class="headerlink" href="#application-listener_1" title="Permanent link">#</a></h2>
 <p>You can place a listener in your application delegate or your execution scripts class to listen to all events
 Example:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>    const api = new BPMNAPI(new BPMNServer(configuration,new Logger({ toConsole: false}),{cron:false}));
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    let options= {option1:1234}; //,option2:SystemUser};
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    api.server.listener.on(&#39;all&#39;, async function ({ context, event, }) {
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>        if (event==&#39;process.restored&#39;)
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>            {
-</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>            context.options=options;
-</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>            context.options[&#39;restored&#39;]=true;
-</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>            }
-</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>        if (event.startsWith(&#39;process.&#39;))
-</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>            console.log(&#39;---Event: --&gt;&#39; + event , context.options);
-</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>        else 
-</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>            console.log(&#39;---Event: --&gt;&#39;+event, &#39;item:&#39;,context.item.elementId,context.options );
-</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>    });
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>    const api = new BPMNAPI(new BPMNServer(configuration,new Logger({ toConsole: false}),{cron:false}));
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    let options= {option1:1234}; //,option2:SystemUser};
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    api.server.listener.on(&#39;all&#39;, async function ({ context, event, }) {
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>        if (event==&#39;process.restored&#39;)
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>            {
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>            context.options=options;
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>            context.options[&#39;restored&#39;]=true;
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>            }
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>        if (event.startsWith(&#39;process.&#39;))
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>            console.log(&#39;---Event: --&gt;&#39; + event , context.options);
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>        else 
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>            console.log(&#39;---Event: --&gt;&#39;+event, &#39;item:&#39;,context.item.elementId,context.options );
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>    });
 </span></code></pre></div></p>
 
 
