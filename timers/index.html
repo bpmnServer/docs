@@ -1131,6 +1131,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#timer-expression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timer Expression
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#implementation" class="md-nav__link">
     <span class="md-ellipsis">
       Implementation:
@@ -1853,6 +1862,31 @@
 <li>
 <p>Start Event Timers will start a new execution, therefore, they are scheduled by a cron job managed by bpmn-server.</p>
 </li>
+</ul>
+<h2 id="timer-expression">Timer Expression<a class="headerlink" href="#timer-expression" title="Permanent link">#</a></h2>
+<ul>
+<li>Timer value can be a text string like <code>PT30S</code> or can be a JavaScript Expression <code>$appServices.getTimerDelay(this)</code>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="w">    </span><span class="nt">&lt;bpmn2:boundaryEvent</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;Event_0hx26qc&quot;</span><span class="w"> </span><span class="na">cancelActivity=</span><span class="s">&quot;false&quot;</span><span class="w"> </span><span class="na">attachedToRef=</span><span class="s">&quot;Activity_0cijuru&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">      </span><span class="nt">&lt;bpmn2:timerEventDefinition</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;TimerEventDefinition_0hwwvzf&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">        </span><span class="nt">&lt;bpmn2:timeDuration</span><span class="w"> </span><span class="na">xsi:type=</span><span class="s">&quot;bpmn2:tFormalExpression&quot;</span><span class="nt">&gt;</span>$appServices.getTimerDelay(this)<span class="nt">&lt;/bpmn2:timeDuration&gt;</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">      </span><span class="nt">&lt;/bpmn2:timerEventDefinition&gt;</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="nt">&lt;/bpmn2:boundaryEvent&gt;</span>
+</span></code></pre></div>
+In this case it is calling an appServices.ts method:
+<div class="language-ts highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="w">    </span><span class="nx">getTimerDelay</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">        </span><span class="c1">// item passed is that of the boundary event</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">        </span><span class="c1">// need to find parent item</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">parentItem</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">token</span><span class="p">.</span><span class="nx">parentToken</span><span class="p">.</span><span class="nx">currentItem</span><span class="p">;</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">priority</span><span class="o">=</span><span class="w"> </span><span class="nx">parentItem</span><span class="p">.</span><span class="nx">priority</span><span class="p">;</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">priority</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;high&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="s1">&#39;PT5S&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// 5 Seconds ISO 8601 duration format</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">priority</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;medium&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="s1">&#39;PT10S&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// 10 Seconds ISO 8601 duration format</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">priority</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;low&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="s1">&#39;PT15S&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// 15 Seconds ISO 8601 duration format</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">    </span><span class="p">}</span>
+</span></code></pre></div></li>
 </ul>
 <h2 id="implementation">Implementation:<a class="headerlink" href="#implementation" title="Permanent link">#</a></h2>
 <h3 id="on-server-start">On Server start:<a class="headerlink" href="#on-server-start" title="Permanent link">#</a></h3>

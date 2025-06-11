@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#error-and-escalation-events" class="md-skip">
+        <a href="#error-events" class="md-skip">
           Skip to content
         </a>
       
@@ -1690,7 +1690,7 @@
   
 
 
-<h1 id="error-and-escalation-events">Error and Escalation Events:<a class="headerlink" href="#error-and-escalation-events" title="Permanent link">#</a></h1>
+<h1 id="error-events">Error Events:<a class="headerlink" href="#error-events" title="Permanent link">#</a></h1>
 <p><img alt="BPMN Diagram" src="../error_events.png" /></p>
 <h2 id="raising-errors">Raising Errors<a class="headerlink" href="#raising-errors" title="Permanent link">#</a></h2>
 <h3 id="through-an-end-events-of-type-error">Through an End Events of type Error<a class="headerlink" href="#through-an-end-events-of-type-error" title="Permanent link">#</a></h3>
@@ -1700,36 +1700,33 @@
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">&lt;/bpmn2:endEvent&gt;</span>
 </span></code></pre></div>
 <h3 id="through-tasks">Through Tasks<a class="headerlink" href="#through-tasks" title="Permanent link">#</a></h3>
-<p>Also Scripts and Services Tasks can Raise BPMN Errors/Escalation/Exception </p>
-<div class="language-text highlight"><pre><span></span><code>return {bpmnError:&#39;error code&#39;};
-</code></pre></div>
-<p>All Scripts and Services can Raise BPMN Escalation, to be handled by the appropriate Catch Escalation Event</p>
-<div class="language-text highlight"><pre><span></span><code>return {escalation:&#39;escalation code&#39;};
-</code></pre></div>
-<p>The current item status will be error and execution will continue at the Error node.
-Throwing Exceptions#</p>
-<div class="language-text highlight"><pre><span></span><code>new error(&#39;error message&#39;);
-</code></pre></div>
-<p>This will raise an Excption, stop workflow execution and save the instance datatake action</p>
+<p>Also Scripts and Services Tasks can Raise BPMN Errors/Exception 
+<div class="language-js highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="nx">bpmnError</span><span class="o">:</span><span class="s1">&#39;error code&#39;</span><span class="p">};</span>
+</span></code></pre></div>
+The current item status will be error and execution will continue at the Error node.
+Throwing Exceptions#
+<div class="language-js highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">    </span><span class="ow">new</span><span class="w"> </span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;error message&#39;</span><span class="p">);</span>
+</span></code></pre></div>
+This will raise an Excption, stop workflow execution and save the instance datatake action</p>
 <h2 id="error-handling">Error Handling<a class="headerlink" href="#error-handling" title="Permanent link">#</a></h2>
 <ul>
 <li>If there is a Boundary Event to catch, it will be invoked</li>
 <li>else if there a start Event to catch it will be invoked.</li>
 <li>else Default error handling will be processed.</li>
 </ul>
-<p>Example of Boundary Event</p>
-<div class="language-text highlight"><pre><span></span><code>&lt;bpmn2:boundaryEvent id=&quot;BoundaryEvent_catchErrors&quot; name=&quot;Error Catcher&quot; attachedToRef=&quot;Task_1yw3plw&quot;&gt;
-  &lt;bpmn2:outgoing&gt;SequenceFlow_0t9u8g1&lt;/bpmn2:outgoing&gt;
-  &lt;bpmn2:errorEventDefinition /&gt;
-&lt;/bpmn2:boundaryEvent&gt;
-</code></pre></div>
+<p>Example of Boundary Event
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">    </span><span class="nt">&lt;bpmn2:boundaryEvent</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;BoundaryEvent_catchErrors&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Error Catcher&quot;</span><span class="w"> </span><span class="na">attachedToRef=</span><span class="s">&quot;Task_1yw3plw&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">      </span><span class="nt">&lt;bpmn2:outgoing&gt;</span>SequenceFlow_0t9u8g1<span class="nt">&lt;/bpmn2:outgoing&gt;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">      </span><span class="nt">&lt;bpmn2:errorEventDefinition</span><span class="w"> </span><span class="nt">/&gt;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="nt">&lt;/bpmn2:boundaryEvent&gt;</span>
+</span></code></pre></div></p>
 <p>Example of Start Event 
-<div class="language-xml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">    </span><span class="nt">&lt;bpmn2:subProcess</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;SubProcess_0hpeg3q&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Event Process&quot;</span><span class="w"> </span><span class="na">triggeredByEvent=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">      </span><span class="nt">&lt;bpmn2:sequenceFlow</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;SequenceFlow_1l0v2kk&quot;</span><span class="w"> </span><span class="na">sourceRef=</span><span class="s">&quot;StartEvent_catchErrors&quot;</span><span class="w"> </span><span class="na">targetRef=</span><span class="s">&quot;Task_10xnxy7&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">      </span><span class="nt">&lt;bpmn2:startEvent</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;StartEvent_catchErrors&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Error Catcher for Process&quot;</span><span class="nt">&gt;</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">        </span><span class="nt">&lt;bpmn2:outgoing&gt;</span>SequenceFlow_1l0v2kk<span class="nt">&lt;/bpmn2:outgoing&gt;</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">        </span><span class="nt">&lt;bpmn2:errorEventDefinition</span><span class="w"> </span><span class="nt">/&gt;</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">      </span><span class="nt">&lt;/bpmn2:startEvent&gt;</span>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">    </span><span class="nt">&lt;bpmn2:subProcess</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;SubProcess_0hpeg3q&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Event Process&quot;</span><span class="w"> </span><span class="na">triggeredByEvent=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">      </span><span class="nt">&lt;bpmn2:sequenceFlow</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;SequenceFlow_1l0v2kk&quot;</span><span class="w"> </span><span class="na">sourceRef=</span><span class="s">&quot;StartEvent_catchErrors&quot;</span><span class="w"> </span><span class="na">targetRef=</span><span class="s">&quot;Task_10xnxy7&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">      </span><span class="nt">&lt;bpmn2:startEvent</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;StartEvent_catchErrors&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Error Catcher for Process&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">        </span><span class="nt">&lt;bpmn2:outgoing&gt;</span>SequenceFlow_1l0v2kk<span class="nt">&lt;/bpmn2:outgoing&gt;</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">        </span><span class="nt">&lt;bpmn2:errorEventDefinition</span><span class="w"> </span><span class="nt">/&gt;</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">      </span><span class="nt">&lt;/bpmn2:startEvent&gt;</span>
 </span></code></pre></div></p>
 
 
